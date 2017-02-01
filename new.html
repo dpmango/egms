@@ -1,616 +1,499 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>eGMS</title>
-    <link rel="stylesheet" href="css/jquery-ui.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/chartist.css">
-    <script src="js/jquery-3.1.0.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.formstyler.min.js"></script>
-    <script src="js/chartist.min.js"></script>
-    <script src="js/main.js"></script>
+  <meta charset="UTF-8">
+  <title>eGMS</title>
+  <link href="css/jquery-ui.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/chartist.css" rel="stylesheet">
+  <script src="js/jquery-3.1.0.min.js">
+  </script>
+  <script src="js/jquery-ui.min.js">
+  </script>
+  <script src="js/jquery.formstyler.min.js">
+  </script>
+  <script src="js/chartist.min.js">
+  </script>
+  <script src="js/main.js">
+  </script>
 </head>
 <body>
-<div class="header">
+  <div class="header">
     <ul class="nav">
-        <li><a href="#">Plotting</a></li>
-        <li><a href="#">Data Export</a></li>
-        <li><a href="#">Operator Management</a></li>
-        <li><a href="#">Alerts</a></li>
-        <li><a href="#">Maintenance Actions</a></li>
-        <li><a href="#">Watch List</a></li>
-        <li><a href="#">Reporting</a></li>
-        <li><a href="#">Customer Motification Reports</a></li>
-    </ul>
-    <strong class="logo">
-        <a href="index.html">eGMS</a>
-    </strong>
-</div>
-
-<div class="main">
+      <li>
+        <a href="#">Plotting</a>
+      </li>
+      <li>
+        <a href="#">Data Export</a>
+      </li>
+      <li>
+        <a href="#">Operator Management</a>
+      </li>
+      <li>
+        <a href="#">Alerts</a>
+      </li>
+      <li>
+        <a href="#">Maintenance Actions</a>
+      </li>
+      <li>
+        <a href="#">Watch List</a>
+      </li>
+      <li>
+        <a href="#">Reporting</a>
+      </li>
+      <li>
+        <a href="#">Customer Motification Reports</a>
+      </li>
+    </ul><strong class="logo"><a href="index.html">eGMS</a></strong>
+  </div>
+  <div class="main">
     <div class="container-2">
-        <h2>Plotting</h2>
+      <h2>Plotting</h2>
     </div>
-    
     <div class="selected-tabs">
-    
-        <!-- tabs-content это целый блок, класс active показывает либо скрывает блок -->
-        <div class="tabs-content active">
-            <div class="tabs-title">
-                <div class="container-2">
-                    <a class="tab-name">Type</a>
-                    <div class="tabs-filter">
-                        <ul>
-                            <!-- Список фильтров которые были выбраны -->
-                            <li>item 1</li>
-                            <li>item 2</li>
-                            <li>item 3</li>
-                            <li>item 4</li>
-                        </ul>
-                    </div>
-                </div>
+      <!-- tabs-content это целый блок, класс active показывает либо скрывает блок -->
+      <div class="tabs-content active">
+        <div class="tabs-title">
+          <div class="container-2">
+            <a class="tab-name">Type</a>
+            <div class="tabs-filter">
+              <ul>
+                <!-- Список фильтров которые были выбраны -->
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 4</li>
+              </ul>
             </div>
-            <div class="tabs-conteiner active">
-                <div class="container-2 container-padding">
-                    <div class="box white-block">
-                        <div class="row">
-                            <div class="col">
-                                
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <div class="watch-list simple list-plots first">
-                                        <table>
-                                            <thead>
-                                                <th colspan="3">Label name</th>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <label class="checkbox-label">
-                                                            <input type="radio" />
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        Title
-                                                    </td>
-                                                    <td>
-                                                        <ul class="q-actions">
-                                                            
-                                                            <li class="edit">
-                                                                <a></a>
-                                                            </li>
-                                                            <li class="delete">
-                                                                <a></a>
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <label class="checkbox-label">
-                                                            <input type="radio" />
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        Title
-                                                    </td>
-                                                    <td>
-                                                        <ul class="q-actions">
-                                                            
-                                                            <li class="edit">
-                                                                <a></a>
-                                                            </li>
-                                                            <li class="delete">
-                                                                <a></a>
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <div class="watch-list simple list-plots">
-                                        <table>
-                                            <thead>
-                                                <th colspan="3">Label name</th>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <label class="checkbox-label">
-                                                            <input type="radio" />
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        Title
-                                                    </td>
-                                                    <td>
-                                                        <ul class="q-actions">
-                                                            
-                                                            <li class="edit disabled">
-                                                                <a></a>
-                                                            </li>
-                                                            <li class="delete disabled">
-                                                                <a></a>
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <label class="checkbox-label">
-                                                            <input type="radio" />
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        Title
-                                                    </td>
-                                                    <td>
-                                                        <ul class="q-actions">
-                                                            
-                                                            <li class="edit disabled">
-                                                                <a></a>
-                                                            </li>
-                                                            <li class="delete disabled">
-                                                                <a></a>
-                                                            </li>
-                                                            <li class="checkbox">
-                                                                <label class="checkbox-label"><input type="checkbox"></label>
-                                                            </li>
-                                                            <li class="move">
-                                                                <a></a>
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    
-                            </div>
-                            
-                            <div class="col">
-                                
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <div class="watch-list simple list-plots first">
-                                        <table>
-                                            <thead>
-                                                <th colspan="3">ALERT PLOTS</th>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <label class="checkbox-label">
-                                                            <input type="radio" />
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        Title
-                                                    </td>
-                                                    <td>
-                                                        <ul class="q-actions">
-                                                            
-                                                            <li class="edit">
-                                                                <a></a>
-                                                            </li>
-                                                            <li class="delete">
-                                                                <a></a>
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <label class="checkbox-label">
-                                                            <input type="radio" />
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        Title
-                                                    </td>
-                                                    <td>
-                                                        <ul class="q-actions">
-                                                            
-                                                            <li class="edit">
-                                                                <a></a>
-                                                            </li>
-                                                            <li class="delete">
-                                                                <a></a>
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    <div class="watch-list simple list-plots">
-                                        <table>
-                                            <thead>
-                                                <th colspan="3">Label name</th>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <label class="checkbox-label">
-                                                            <input type="radio" />
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        Title
-                                                    </td>
-                                                    <td>
-                                                        <ul class="q-actions">
-                                                            
-                                                            <li class="edit disabled">
-                                                                <a></a>
-                                                            </li>
-                                                            <li class="checkbox">
-                                                                <label class="checkbox-label"><input type="checkbox"></label>
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <label class="checkbox-label">
-                                                            <input type="radio" />
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        Title
-                                                    </td>
-                                                    <td>
-                                                        
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    
-                            </div>
-                            
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="splitter"></div>
-                <div class="container-2">
-                    <div class="query-form-bottom">
-                        
-                        <div class="form-control">
-                            <button class="btn btn-primary min-width margin-left"><span class="icon icon-save"></span>Next</button>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
+          </div>
         </div>
-        
-        
-        <div class="tabs-content active">
-            <div class="tabs-title active">
-                <div class="container-2">
-                    <a class="tab-name">Type</a>
-                    <div class="tabs-filter">
-                        <ul>
-                            <li>item 1</li>
-                            <li>item 2</li>
-                            <li>item 3</li>
-                            <li>item 4</li>
-                        </ul>
-                    </div>
+        <div class="tabs-conteiner active">
+          <div class="container-2 container-padding">
+            <div class="box white-block">
+              <div class="row">
+                <div class="col">
+                  <div class="watch-list simple list-plots first">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th colspan="3">Label name</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><label class="checkbox-label"><input type="radio"></label></td>
+                          <td>Title</td>
+                          <td>
+                            <ul class="q-actions">
+                              <li class="edit">
+                                <a></a>
+                              </li>
+                              <li class="delete">
+                                <a></a>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><label class="checkbox-label"><input type="radio"></label></td>
+                          <td>Title</td>
+                          <td>
+                            <ul class="q-actions">
+                              <li class="edit">
+                                <a></a>
+                              </li>
+                              <li class="delete">
+                                <a></a>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="watch-list simple list-plots">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th colspan="3">Label name</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><label class="checkbox-label"><input type="radio"></label></td>
+                          <td>Title</td>
+                          <td>
+                            <ul class="q-actions">
+                              <li class="edit disabled">
+                                <a></a>
+                              </li>
+                              <li class="delete disabled">
+                                <a></a>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><label class="checkbox-label"><input type="radio"></label></td>
+                          <td>Title</td>
+                          <td>
+                            <ul class="q-actions">
+                              <li class="edit disabled">
+                                <a></a>
+                              </li>
+                              <li class="delete disabled">
+                                <a></a>
+                              </li>
+                              <li class="checkbox"><label class="checkbox-label"><input type="checkbox"></label></li>
+                              <li class="move">
+                                <a></a>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
+                <div class="col">
+                  <div class="watch-list simple list-plots first">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th colspan="3">ALERT PLOTS</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><label class="checkbox-label"><input type="radio"></label></td>
+                          <td>Title</td>
+                          <td>
+                            <ul class="q-actions">
+                              <li class="edit">
+                                <a></a>
+                              </li>
+                              <li class="delete">
+                                <a></a>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><label class="checkbox-label"><input type="radio"></label></td>
+                          <td>Title</td>
+                          <td>
+                            <ul class="q-actions">
+                              <li class="edit">
+                                <a></a>
+                              </li>
+                              <li class="delete">
+                                <a></a>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="watch-list simple list-plots">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th colspan="3">Label name</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><label class="checkbox-label"><input type="radio"></label></td>
+                          <td>Title</td>
+                          <td>
+                            <ul class="q-actions">
+                              <li class="edit disabled">
+                                <a></a>
+                              </li>
+                              <li class="checkbox"><label class="checkbox-label"><input type="checkbox"></label></li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><label class="checkbox-label"><input type="radio"></label></td>
+                          <td>Title</td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="tabs-conteiner active">
-                <div class="container-2 container-padding-3">
-                    <div class="box">
-                        <div class="row">
-                            <div class="col">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="form-control">
-                                            <label>Available fields</label>
-                                            <select>
-                                                <option value="0">Last n days</option>
-                                                <option value="1">First n days</option>
-                                                <option value="2">5 days</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="form-control">
-                                            <label>Available fields</label>
-                                            <select>
-                                                <option value="0">Last n days</option>
-                                                <option value="1">First n days</option>
-                                                <option value="2">5 days</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="form-control query-criteria">
-                                    <label>Selected fields</label>
-                                    <span class="multivalue">
-                                        <input type="text" value="Aeroflot,S7">
-                                        <span>Aeroflot</span>
-                                        <span>S7</span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box no-margin">
-                        <div class="row">
-                            <div class="col">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="form-control">
-                                            <label>From</label>
-                                            <input type="text" class="datepicker">
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="form-control">
-                                            <label>To</label>
-                                            <input type="text" class="datepicker">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="form-control query-criteria">
-                                    <label>Selected fields</label>
-                                    <span class="multivalue shadow">
-                                        <a>Last Week</a>
-                                        <a>Last Moth</a>
-                                        <a>Last Year</a>
-                                        <a>All Data</a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="splitter"></div>
-                <div class="container-2">
-                    <div class="query-form-bottom">
-                        
-                        <div class="form-control">
-                            <button class="btn min-width margin-left"><span class="icon icon-back"></span>Back</button>
-                            <button class="btn btn-primary min-width margin-left"><span class="icon icon-save"></span>Next</button>
-                        </div>
-                    </div>
-                </div>
-                
+          </div>
+          <div class="splitter"></div>
+          <div class="container-2">
+            <div class="query-form-bottom">
+              <div class="form-control">
+                <button class="btn btn-primary min-width margin-left"><span class="icon icon-save"></span>Next</button>
+              </div>
             </div>
+          </div>
         </div>
-        
-        <div class="tabs-content active">
-            <div class="tabs-title active">
-                <div class="container-2">
-                    <a class="tab-name">Type</a>
-                    <div class="tabs-filter">
-                        <ul>
-                            <li>item 1</li>
-                            <li>item 2</li>
-                            <li>item 3</li>
-                            <li>item 4</li>
-                        </ul>
-                    </div>
-                </div>
+      </div>
+      <div class="tabs-content active">
+        <div class="tabs-title active">
+          <div class="container-2">
+            <a class="tab-name">Type</a>
+            <div class="tabs-filter">
+              <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 4</li>
+              </ul>
             </div>
-            <div class="tabs-conteiner">
-                <div class="container-2 container-padding-3">
-                    <div class="box no-margin">
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-control">
-                                    <label>Available fields</label>
-                                    <div class="filter-list">
-                                        <div class="filter-list-form">
-                                            <input type="text" placeholder="Filter" style="width: 100%;">
-                                            <!--<button class="btn">Add All</button>-->
-                                        </div>
-                                        <ul class="items">
-                                            <li class="selected">
-                                                <a href="#" class="remove-selected">Remove</a>
-                                                <span>Carrier</span>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="add-item">Add</a>
-                                                <span>Delta EGT</span>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="add-item">Add</a>
-                                                <span>Delta EGT SMoothed</span>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="add-item">Add</a>
-                                                <span>Delta Oil Pressure</span>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="add-item">Add</a>
-                                                <span>Delta Oil Pressure Smoothed</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="form-control">
-                                    <label>Selected fields</label>
-                                    <ul class="selected-fields">
-                                        <li>
-                                            <a href="#" class="remove-selected">Remove</a>
-                                            <span>Carrier</span>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="remove-selected">Remove</a>
-                                            <span>Aircraft ID</span>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="remove-selected">Remove</a>
-                                            <span>ESN</span>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="remove-selected">Remove</a>
-                                            <span>ETOPS EGT Margin – Climb</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                
-                                <p class="p-text">The result will be displayed in 4 plots with single Y-axis</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="splitter"></div>
-                <div class="container-2">
-                    <div class="query-form-bottom">
-                        
-                        <div class="form-control">
-                            <button class="btn min-width margin-left"><span class="icon icon-back"></span>Back</button>
-                            <button class="btn btn-primary min-width margin-left"><span class="icon icon-save"></span>Plot</button>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
+          </div>
         </div>
-        
-        
-        
-        
-        
-        <div class="tabs-content active">
-            <div class="tabs-title active">
-                <div class="container-2">
-                    <a class="tab-name">Type</a>
-                    <div class="tabs-filter">
-                        <ul>
-                            <li>item 1</li>
-                            <li>item 2</li>
-                            <li>item 3</li>
-                            <li>item 4</li>
-                        </ul>
+        <div class="tabs-conteiner active">
+          <div class="container-2 container-padding-3">
+            <div class="box">
+              <div class="row">
+                <div class="col">
+                  <div class="row">
+                    <div class="col">
+                      <div class="form-control">
+                        <label>Available fields</label> <select>
+                          <option value="0">
+                            Last n days
+                          </option>
+                          <option value="1">
+                            First n days
+                          </option>
+                          <option value="2">
+                            5 days
+                          </option>
+                        </select>
+                      </div>
                     </div>
+                    <div class="col">
+                      <div class="form-control">
+                        <label>Available fields</label> <select>
+                          <option value="0">
+                            Last n days
+                          </option>
+                          <option value="1">
+                            First n days
+                          </option>
+                          <option value="2">
+                            5 days
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <div class="col">
+                  <div class="form-control query-criteria">
+                    <label>Selected fields</label> <span class="multivalue"><input type="text" value="Aeroflot,S7"> <span>Aeroflot</span> <span>S7</span></span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="tabs-conteiner">
-                
-                    <div class="box no-margin">
-                        <div class="container-2">
-                            <h3 style="margin-top: 30px;">Query Criteria</h3>
-                        </div>
-                        <div class="watch-list transparent table-full-width-content">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <!-- Сортировка sorting_asc или sorting_desc -->
-                                        <th style="width: 100px;">Carrier <span class="sorting_asc sorting_desc"></span></th>
-                                        <th>Aircraft ID</th>
-                                        <th>Position</th>
-                                        <th>ESN</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Aeroflot</td>
-                                        <td>FHY-RTY</td>
-                                        <td>2</td>
-                                        <td>767003</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Aeroflot</td>
-                                        <td>FHY-RTY</td>
-                                        <td>2</td>
-                                        <td>767003</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Aeroflot</td>
-                                        <td>FHY-RTY</td>
-                                        <td>2</td>
-                                        <td>767003</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Aeroflot</td>
-                                        <td>FHY-RTY</td>
-                                        <td>2</td>
-                                        <td>767003</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+            <div class="box no-margin">
+              <div class="row">
+                <div class="col">
+                  <div class="row">
+                    <div class="col">
+                      <div class="form-control">
+                        <label>From</label> <input class="datepicker" type="text">
+                      </div>
                     </div>
-                
-                <div class="container-2 box container-padding-4">
-                    <h3 class="title">Query Criteria</h3>
-                    <div class="query-form-bottom right">
-                        <div class="form-control">
-                            <button class="btn min-width margin-left dropdown"><span class="icon icon-export"></span>Export as
-                                <div class="jq-selectbox__dropdown">
-                                    <ul>
-                                        <li>As 1</li>
-                                        <li>As 2</li>
-                                        <li>As 3</li>
-                                    </ul>
-                                </div>
-                            </button>
-                            <!-- Добавить или убрать dropdown -->
-                            <button class="btn btn-primary down-white min-width margin-left dropdown"><span class="icon icon-save"></span>Save as 
-                                <div class="jq-selectbox__dropdown">
-                                    <ul>
-                                        <li>As 1</li>
-                                        <li>As 2</li>
-                                        <li>As 3</li>
-                                    </ul>
-                                </div>
-                            </button>
-                        </div>
+                    <div class="col">
+                      <div class="form-control">
+                        <label>To</label> <input class="datepicker" type="text">
+                      </div>
                     </div>
+                  </div>
                 </div>
-                
-                <div class="container-2">
-                    <div class="ct-chart ct-perfect-fourth" style="overflow: hidden; height: 300px;"></div>
+                <div class="col">
+                  <div class="form-control query-criteria">
+                    <label>Selected fields</label> <span class="multivalue shadow"><a>Last Week</a> <a>Last Moth</a> <a>Last Year</a> <a>All Data</a></span>
+                  </div>
                 </div>
-                <script>
+              </div>
+            </div>
+          </div>
+          <div class="splitter"></div>
+          <div class="container-2">
+            <div class="query-form-bottom">
+              <div class="form-control">
+                <button class="btn min-width margin-left"><span class="icon icon-back"></span>Back</button> <button class="btn btn-primary min-width margin-left"><span class="icon icon-save"></span>Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tabs-content active">
+        <div class="tabs-title active">
+          <div class="container-2">
+            <a class="tab-name">Type</a>
+            <div class="tabs-filter">
+              <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 4</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tabs-conteiner">
+          <div class="container-2 container-padding-3">
+            <div class="box no-margin">
+              <div class="row">
+                <div class="col">
+                  <div class="form-control">
+                    <label>Available fields</label>
+                    <div class="filter-list">
+                      <div class="filter-list-form">
+                        <input placeholder="Filter" style="width: 100%;" type="text"> <!--<button class="btn">Add All</button>-->
+                      </div>
+                      <ul class="items">
+                        <li class="selected">
+                          <a class="remove-selected" href="#">Remove</a> <span>Carrier</span>
+                        </li>
+                        <li>
+                          <a class="add-item" href="#">Add</a> <span>Delta EGT</span>
+                        </li>
+                        <li>
+                          <a class="add-item" href="#">Add</a> <span>Delta EGT SMoothed</span>
+                        </li>
+                        <li>
+                          <a class="add-item" href="#">Add</a> <span>Delta Oil Pressure</span>
+                        </li>
+                        <li>
+                          <a class="add-item" href="#">Add</a> <span>Delta Oil Pressure Smoothed</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-control">
+                    <label>Selected fields</label>
+                    <ul class="selected-fields">
+                      <li>
+                        <a class="remove-selected" href="#">Remove</a> <span>Carrier</span>
+                      </li>
+                      <li>
+                        <a class="remove-selected" href="#">Remove</a> <span>Aircraft ID</span>
+                      </li>
+                      <li>
+                        <a class="remove-selected" href="#">Remove</a> <span>ESN</span>
+                      </li>
+                      <li>
+                        <a class="remove-selected" href="#">Remove</a> <span>ETOPS EGT Margin – Climb</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <p class="p-text">The result will be displayed in 4 plots with single Y-axis</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="splitter"></div>
+          <div class="container-2">
+            <div class="query-form-bottom">
+              <div class="form-control">
+                <button class="btn min-width margin-left"><span class="icon icon-back"></span>Back</button> <button class="btn btn-primary min-width margin-left"><span class="icon icon-save"></span>Plot</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tabs-content active">
+        <div class="tabs-title active">
+          <div class="container-2">
+            <a class="tab-name">Type</a>
+            <div class="tabs-filter">
+              <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 4</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tabs-conteiner">
+          <div class="box no-margin">
+            <div class="container-2">
+              <h3 style="margin-top: 30px;">Query Criteria</h3>
+            </div>
+            <div class="watch-list transparent table-full-width-content">
+              <table>
+                <thead>
+                  <tr>
+                    <!-- Сортировка sorting_asc или sorting_desc -->
+                    <th style="width: 100px;">Carrier <span class="sorting_asc sorting_desc"></span></th>
+                    <th>Aircraft ID</th>
+                    <th>Position</th>
+                    <th>ESN</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Aeroflot</td>
+                    <td>FHY-RTY</td>
+                    <td>2</td>
+                    <td>767003</td>
+                  </tr>
+                  <tr>
+                    <td>Aeroflot</td>
+                    <td>FHY-RTY</td>
+                    <td>2</td>
+                    <td>767003</td>
+                  </tr>
+                  <tr>
+                    <td>Aeroflot</td>
+                    <td>FHY-RTY</td>
+                    <td>2</td>
+                    <td>767003</td>
+                  </tr>
+                  <tr>
+                    <td>Aeroflot</td>
+                    <td>FHY-RTY</td>
+                    <td>2</td>
+                    <td>767003</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="container-2 box container-padding-4">
+            <h3 class="title">Query Criteria</h3>
+            <div class="query-form-bottom right">
+              <div class="form-control">
+                <button class="btn min-width margin-left dropdown"><span class="icon icon-export"></span>Export as
+                <div class="jq-selectbox__dropdown">
+                  <ul>
+                    <li>As 1</li>
+                    <li>As 2</li>
+                    <li>As 3</li>
+                  </ul>
+                </div></button> <!-- Добавить или убрать dropdown -->
+                 <button class="btn btn-primary down-white min-width margin-left dropdown"><span class="icon icon-save"></span>Save as
+                <div class="jq-selectbox__dropdown">
+                  <ul>
+                    <li>As 1</li>
+                    <li>As 2</li>
+                    <li>As 3</li>
+                  </ul>
+                </div></button>
+              </div>
+            </div>
+          </div>
+          <div class="container-2">
+            <div class="ct-chart ct-perfect-fourth" style="overflow: hidden; height: 300px;"></div>
+          </div>
+          <script>
                 var data = {
                   // A labels array that can contain any sort of values
                   labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
@@ -619,22 +502,15 @@
                     [5, 2, 4, 2, 3,4]
                   ]
                 };
-                
+
                 new Chartist.Line('.ct-chart', data,{
                     height: '300px'
                 });
-                
-                </script>
-            </div>
+
+          </script>
         </div>
+      </div>
     </div>
-    
-
-    
-    
-    
-
-</div>
-
+  </div>
 </body>
 </html>
