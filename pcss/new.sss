@@ -1,1 +1,149 @@
+// POSSIBLE CONFLICTS
+
+.actions
+  .buttons
+    float: left
+    display: inline-block
+    margin-right: 60px
+    &.right
+      float: right
+      margin-right: 0
+
+
 // NEW STYLES
+.filter
+  &-row
+    margin-top: 15px
+    &:first-child
+      padding-top: 0
+    &::after
+      display: block
+      clear: both
+      content: ' '
+  .form-control
+    &:last-child
+      margin-right: 0
+    &--wide
+      width: 35%
+      @media(width <= 1200px)
+        width: 33%
+
+  .checkboxes-inline
+    padding-right: 10px
+    .checkbox-label
+      margin-top: 5px
+      display: inline-block
+      margin-right: 30px
+      &:last-child
+        margin-right: auto
+
+.actions
+  .heading
+    &--noStatus
+      padding-top: 10px
+      width: auto
+      margin-right: 20px
+  .form-control
+    float: left
+    margin-top: 4px
+    min-width: 290px
+
+.alert
+  &-list
+    margin-left: -20px
+    margin-right: -20px
+    box-shadow: 0px 2px 2px color(black a(25%))
+    margin-bottom: 25px
+  &-listItem
+    background: white
+    white-space: nowrap
+    padding-top: 5px
+    padding-bottom: 5px
+    margin-bottom: 2px
+    &::after
+      clear: both
+      content: ' '
+      display: block
+    &-control
+      float: left
+      width: 57px
+      min-height: 65px
+      border-right: 1px solid #ccc
+      text-align: center
+      position: relative
+      .checkbox-label
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    &-content
+      float: left
+      width: calc(100% - 60px)
+    &-top
+      background: #f7f7f7
+      padding: 5px 30px
+    &-topElement
+      margin-right: 15px
+      vertical-align: middle
+      .icon
+        margin-right: 5px
+    &-bottom
+      padding: 9px 30px 5px 30px
+    &-bottomElement
+      display: inline-block
+      width: 22.5%
+      b
+        font-weight: bold
+      a
+        text-decoration: underline
+        &:hover
+          text-decoration: none
+
+
+// ICONS CSS ONLY
+.icon-new
+  background: #596c99
+  color: white
+  padding: 0 8px
+.icon-hot
+  background: tomato
+  color: white
+  padding: 0 8px
+
+// ICONS - refactor to sprite ?
+.icon-claim
+  background: url(../img/claim.png) 50% 50% no-repeat
+  size: 17px
+
+.icon-type-urgent
+  background: url('../img/icon-priority.png') 50% 50% no-repeat
+  size: 23px
+  vertical-align: -5px
+.icon-type-alarm
+  background: url('../img/icon-type-alarm.png') 50% 50% no-repeat
+  size: 23px
+  vertical-align: -5px
+.icon-report
+  background: url('../img/icon-report.png') 50% 50% no-repeat
+  size: 20px 16px
+  vertical-align: -2px
+
+.icon-priority
+  size: 20px 19px
+  vertical-align: -3px
+  &.low
+    background: url('../img/icon-priority-low.png') 50% 50% no-repeat
+  &.med
+    background: url('../img/icon-priority-med.png') 50% 50% no-repeat
+  &.high
+    background: url('../img/icon-priority-high.png') 50% 50% no-repeat
+
+.icon-info
+  background: url('../img/icon-info.png') 50% 50% no-repeat
+  width: 21px
+  height: 20px
+  vertical-align: -4px
+
+// icon modificators
+span[class^='icon'].muted
+  opacity: .35
