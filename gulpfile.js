@@ -16,6 +16,7 @@ var pixrem        = require('pixrem');
 var cssnano       = require('cssnano');
 var useref        = require('gulp-useref');
 var uglify        = require('gulp-uglify');
+var spritesmith   = require('gulp.spritesmith');
 var gulpIf        = require('gulp-if');
 var cache         = require('gulp-cache');
 var del           = require('del');
@@ -99,6 +100,17 @@ gulp.task('cssnano', function () {
     })]) )
     .pipe(rename({ extname: '.min.css' }))
     .pipe(gulp.dest('dist/css'));;
+});
+
+gulp.task('sprite', function () {
+  var spriteData = gulp.src('img/sprites/*.png')
+      .pipe(spritesmith({
+          /* this whole image path is used in css background declarations */
+          imgName: '../img/sprite.png',
+          cssName: 'sprite.css'
+      }));
+  spriteData.img.pipe(gulp.dest('img'));
+  spriteData.css.pipe(gulp.dest('css'));
 });
 
 // hot reload

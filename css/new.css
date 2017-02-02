@@ -330,17 +330,19 @@ b {
   color: white;
 }
 
-/* ICONS - refactor to sprite ? */
+/* ICONS */
 .icon-claim {
   width: 17px;
   height: 17px;
-  background: url(../img/claim.png) 50% 50% no-repeat;
+  background-image: url(../img/sprite.png);
+  background-position: 0px -78px;
 }
 
 .icon-unclaim {
   width: 18px;
   height: 18px;
-  background: url(../img/icon-unclaim.png) 50% 50% no-repeat;
+  background-image: url(../img/sprite.png);
+  background-position: 0px -60px;
 }
 
 .icon-eye {
@@ -348,6 +350,7 @@ b {
   height: 17px;
   background: url('../img/icon-eye.png') 50% 50% no-repeat;
 }
+
 .icon-uneye {
   width: 20px;
   height: 18px;
@@ -356,20 +359,23 @@ b {
 
 .icon-type-urgent {
   width: 23px;
-  height: 23px;
-  background: url('../img/icon-priority.png') 50% 50% no-repeat;
+  height: 22px;
+  background-image: url(../img/sprite.png);
+  background-position: -54px 0px;
   vertical-align: -5px;
 }
 .icon-type-alarm {
-  width: 23px;
-  height: 23px;
-  background: url('../img/icon-type-alarm.png') 50% 50% no-repeat;
+  width: 21px;
+  height: 20px;
+  background-image: url(../img/sprite.png);
+  background-position: 0px -40px;
   vertical-align: -5px;
 }
 .icon-report {
   width: 20px;
   height: 16px;
-  background: url('../img/icon-report.png') 50% 50% no-repeat;
+  background-image: url(../img/sprite.png);
+  background-position: -30px -23px;
   vertical-align: -2px;
 }
 
@@ -380,28 +386,33 @@ b {
 }
 
 .icon-priority.low {
-  background: url('../img/icon-priority-low.png') 50% 50% no-repeat;
+  background-image: url(../img/sprite.png);
+  background-position: -77px 0px;
 }
 
 .icon-priority.med {
-  background: url('../img/icon-priority-med.png') 50% 50% no-repeat;
+  background-image: url(../img/sprite.png);
+  background-position: -77px -38px;
 }
 
 .icon-priority.high {
-  background: url('../img/icon-priority-high.png') 50% 50% no-repeat;
+  background-image: url(../img/sprite.png);
+  background-position: -77px -19px;
 }
 
 .icon-info {
   width: 21px;
   height: 20px;
-  background: url('../img/icon-info.png') 50% 50% no-repeat;
+  background-image: url(../img/sprite.png);
+  background-position: -21px -40px;
   vertical-align: -4px;
 }
 
 .icon-datetime {
   width: 21px;
   height: 20px;
-  background: url('../img/icon-datetime.png') 50% 50% no-repeat;
+  background-image: url(../img/sprite.png);
+  background-position: -42px -40px;
   vertical-align: -4px;
 }
 
