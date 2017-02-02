@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Single alert</title>
+  <link href="css/jquery-ui.min.css" rel="stylesheet">
+  <link href="css/chartist.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/new.css" rel="stylesheet">
+  <script src="js/jquery-3.1.0.min.js">
+  </script>
+  <script src="js/jquery-ui.min.js">
+  </script>
+  <script src="js/jquery.formstyler.min.js">
+  </script>
+  <script src="js/chartist.min.js">
+  </script>
+  <script src="js/main.js">
+  </script>
+
+</head>
+<body>
+  <div class="header">
+    <ul class="nav">
+      <li>
+        <a href="#">Plotting</a>
+      </li>
+      <li>
+        <a href="#">Data Export</a>
+      </li>
+      <li>
+        <a href="#">Operator Management</a>
+      </li>
+      <li class="current">
+        <a href="#">Alerts</a>
+      </li>
+      <li>
+        <a href="#">Maintenance Actions</a>
+      </li>
+      <li class="">
+        <a href="#">Watch List</a>
+      </li>
+      <li>
+        <a href="#">Reporting</a>
+      </li>
+      <li>
+        <a href="#">Customer Motification Reports</a>
+      </li>
+    </ul><strong class="logo"><a href="index.html">eGMS</a></strong>
+  </div>
+  <div class="main">
+    <div class="container-2">
+      <h2>Alert 1241551</h2>
+      <div class="watch-list-item-info">
+        <h3 class="title">Alert Details</h3>
+        <div class="row p20">
+          <div class="col">
+            <ul>
+              <li><span class="param">Flight Phase</span> <span class="value">Cruise</span></li>
+              <li><span class="param">Flight Date</span> <span class="value">12.09.2016 05:15:32</span></li>
+              <li><span class="param">Alert Message</span> <span class="value">Sudden shift in core vibration-2</span></li>
+              <li><span class="param">Parameter</span> <span class="value">VB</span></li>
+              <li><span class="param">Alert Value</span> <span class="value">0.576</span></li>
+            </ul>
+          </div>
+          <div class="col">
+            <ul>
+              <li><span class="param">Operator</span> <span class="value">Aeroftlot</span></li>
+              <li><span class="param">Aircraft</span> <span class="value">Aircraft 1</span></li>
+              <li><span class="param">ESN</span> <span class="value">Engine 1</span></li>
+              <li><span class="param">Position</span> <span class="value">1</span></li>
+              <li><span class="param">Flight Date</span> <span class="value">22.09.2016 05:15:32</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- splitter -->
+    <div class="splitter-info">
+      <div class="container-2">
+        <div class="splitter-info-scope">
+          <b>Claimed by</b> John Smith
+          <br>
+          <b>On</b> 13.09.2016 14:13:55
+        </div>
+        <div class="buttons">
+          <a class="btn" href="#"><span class="icon icon-claim"></span>Claim</a>
+          <a class="btn" href="#"><span class="icon icon-eye"></span>Add to Watch List</a>
+        </div>
+      </div>
+    </div>
+    <!-- next info container -->
+    <div class="container-2">
+      <div class="watch-list-item-info">
+        <div class="row p20">
+          <div class="col">
+            <h3 class="title">Closure Information</h3>
+            <ul>
+              <li><span class="param">Closed by</span> <span class="value">John Smith <br> <b>On</b> 13.09.2016 14:13:55</span></li>
+              <li><span class="param">CSC Case</span> <span class="value">2016-10/00001 A</span></li>
+              <li><span class="param">Reason</span> <span class="value">UFO Attack</span></li>
+              <li><span class="param">Comment</span> <span class="value">True story</span></li>
+              <li><span class="param">CNR</span> <span class="value"><a href="#">CNR Report 1</a></span></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3 class="title">Related Alerts</h3>
+            <div class="alert-listMini">
+              <div class="alert-listMini-row">
+                <a href="#">
+                  <span class="icon-new">New</span>
+                </a>
+                <span class="icon icon-priority med"></span>
+                <span>Medium</span>
+                <span class="icon icon-datetime"></span>
+                <span>12.09.2016 05:15:32</span>
+              </div>
+              <div class="alert-listMini-row">
+                <span class="icon icon-info"></span>
+                <span><a href="#">Sudden shift in core vibration-2</a></span>
+              </div>
+            </div>
+            <!-- mini alert -->
+            <div class="alert-listMini">
+              <div class="alert-listMini-row">
+                <a href="#">
+                  <span class="icon-new">New</span>
+                </a>
+                <span class="icon icon-priority med"></span>
+                <span>Medium</span>
+                <span class="icon icon-datetime"></span>
+                <span>12.09.2016 05:15:32</span>
+              </div>
+              <div class="alert-listMini-row">
+                <span class="icon icon-info"></span>
+                <span><a href="#">Sudden shift in core vibration-2</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- splitter -->
+    <div class="splitter-info">
+      <div class="container-2">
+        <div class="splitter-info-scope">
+          <b>Claimed by</b> John Smith
+          <br>
+          <b>On</b> 13.09.2016 14:13:55
+        </div>
+        <div class="buttons">
+          <a class="btn" href="#"><span class="icon icon-unclaim"></span>Unclaim</a>
+          <a class="btn" href="#"><span class="icon icon-uneye"></span>Remove from Watch List</a>
+        </div>
+      </div>
+    </div>
+    <!-- next info container -->
+    <div class="container-2">
+      <div class="watch-list-item-info">
+        <div class="row p20">
+          <div class="col">
+            <h3 class="title">Closure Information</h3>
+            <div class="row">
+              <div class="col">
+                <div class="form-control">
+                  <label>CSC case</label>
+                  <input type="text" />
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-control">
+                  <label>Reason</label> <select>
+                    <option value="0">
+                      UFO Attack
+                    </option>
+                    <option value="1">
+                      Sucess
+                    </option>
+                    <option value="2">
+                      Fail
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-control">
+              <label>Comment</label>
+              <textarea cols="30" id="" name="" rows="5" class="h75"></textarea>
+            </div>
+            <div class="form-control">
+              <label class="checkbox-label"><input type="checkbox">Close related alerts woth the same conclusion</label>
+            </div>
+            <div class="buttons buttons-two-col mt20">
+              <a class="btn" href="#">Cancel</a>
+              <a class="btn btn-primary" href="#"><span class="icon icon-save"></span>Close Alert <span class="muted">(with 1 related)</span></a>
+            </div>
+
+          </div>
+          <!-- Right with interactive alerts -->
+          <div class="col">
+            <h3 class="title">Related Alerts</h3>
+            <div class="alert-listMini alert-listMini--condenced">
+              <div class="alert-listItem-control">
+                <label class="checkbox-label"><input checked="checked" type="checkbox"></label>
+              </div>
+              <div class="alert-listItem-content">
+                <div class="alert-listMini-row">
+                  <a href="#">
+                    <span class="icon-new">New</span>
+                  </a>
+                  <span class="icon icon-priority high"></span>
+                  <span>High</span>
+                  <span class="icon icon-datetime"></span>
+                  <span>12.09.2016 05:15:32</span>
+                </div>
+                <div class="alert-listMini-row">
+                  <span class="icon icon-info"></span>
+                  <span><a href="#">Sudden shift in core vibration-2</a></span>
+                </div>
+              </div>
+            </div>
+            <!-- mini alert -->
+            <div class="alert-listMini alert-listMini--condenced">
+              <div class="alert-listItem-control">
+                <label class="checkbox-label"><input checked="checked" type="checkbox"></label>
+              </div>
+              <div class="alert-listItem-content">
+                <div class="alert-listMini-row">
+                  <a href="#">
+                    <span class="icon-new">New</span>
+                  </a>
+                  <span class="icon icon-priority high"></span>
+                  <span>High</span>
+                  <span class="icon icon-datetime"></span>
+                  <span>12.09.2016 05:15:32</span>
+                </div>
+                <div class="alert-listMini-row">
+                  <span class="icon icon-info"></span>
+                  <span><a href="#">Sudden shift in core vibration-2</a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- performace block -->
+    <div class="performance-tabs">
+      <div class="container-2">
+        <ul>
+          <li class="active">Performance</li>
+          <li>Takeoff Oil</li>
+          <li>Cruise Oil</li>
+          <li>Takeoff Vibration</li>
+          <li>Cruise Vibration</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container-2">
+      <div class="row mt20">
+        <div class="col">
+          <h3 class="title">Closure Information</h3>
+        </div>
+        <div class="col text-right">
+          <div class="edit-control auto">
+            <label>Date range</label>
+            <select>
+              <option value="0">
+                Auto (center on alert)
+              </option>
+              <option value="1">
+                By increasing value
+              </option>
+              <option value="2">
+                By decreasing value
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="ct-chart ct-perfect-fourth" style="overflow: hidden; height: 300px;"></div>
+      <script>
+            var data = {
+              // A labels array that can contain any sort of values
+              labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+              // Our series array that contains series objects or in this case series data arrays
+              series: [
+                [1.2, 1.6, 2.6, 3.5, 5, 6]
+              ]
+            };
+
+            new Chartist.Line('.ct-chart', data,{
+                height: '300px'
+            });
+
+      </script>
+
+    </div>
+
+  </div>
+</body>
+</html>

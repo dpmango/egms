@@ -1,16 +1,89 @@
-/* POSSIBLE CONFLICTS */
+/* GENERIC CLASSES __ RC */
+.muted {
+  opacity: .5;
+}
 
+.mt20 {
+  margin-top: 20px;
+}
+
+.flr {
+  float: right;
+}
+
+.buttons-two-col .btn {}
+
+.buttons-two-col .btn:first-child {
+  float: left;
+}
+
+.buttons-two-col .btn:last-child {
+  float: right;
+}
+
+.buttons-two-col::after {
+  display: block;
+  clear: both;
+  content: ' ';
+}
+
+
+/* POSSIBLE CONFLICTS */
 .actions .buttons {
   display: inline-block;
   float: left;
   margin-right: 60px;
 }
-
 .actions .buttons.right {
   float: right;
   margin-right: 0;
 }
 
+h3.title {
+  margin: 0 0 20px;
+  color: #5f6062;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+b {
+  font-weight: 700;
+}
+
+.watch-list-item-info li a {
+  text-decoration: underline;
+}
+
+.watch-list-item-info .form-control {
+  margin-bottom: 12px;
+}
+
+.form-control textarea {
+  width: 100%;
+}
+
+.form-control textarea.h75 {
+  height: 75px;
+}
+
+.row {}
+
+.row::after {
+  display: block;
+  clear: both;
+  content: ' ';
+}
+
+.row.p20 {
+  margin-right: -20px;
+  margin-left: -20px;
+}
+
+.row.p20 > .col {
+  padding-right: 20px;
+  padding-left: 20px;
+}
 
 /* NEW STYLES */
 .filter .form-control {}
@@ -43,20 +116,22 @@
   content: ' ';
 }
 @media(max-width: 1200px) {
-
   .filter .form-control--wide {
     width: 33%;
   }
 }
 
+.edit-control.auto label {
+  float: none;
+  margin-right: 15px;
+  width: auto;
+}
 .actions .heading {}
-
 .actions .heading--noStatus {
   margin-right: 20px;
   padding-top: 10px;
   width: auto;
 }
-
 .actions .form-control {
   float: left;
   margin-top: 4px;
@@ -146,6 +221,102 @@
   text-decoration: none;
 }
 
+.alert-listMini {
+  margin-bottom: 15px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d6d8dc;
+}
+
+.alert-listMini .alert-listItem-control {
+  width: 43px;
+  height: 65px;
+}
+
+.alert-listMini .alert-listItem-content {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 10px;
+  padding-left: 20px;
+  width: -webkit-calc(100% - 45px);
+  width: calc(100% - 45px);
+}
+
+.alert-listMini .alert-listItem-content span {
+  margin-right: 10px;
+}
+
+.alert-listMini .alert-listItem-content .icon {
+  margin-right: 5px;
+}
+
+.alert-listMini::after {
+  display: block;
+  clear: both;
+  content: ' ';
+}
+
+.alert-listMini--condenced {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.alert-listMini-row {
+  margin-bottom: 8px;
+}
+
+.alert-listMini-row span {
+  margin-right: 15px;
+}
+
+.alert-listMini-row .icon {
+  margin-right: 5px;
+}
+
+.alert-listMini-row:last-child a {
+  text-decoration: underline;
+}
+
+.splitter-info {
+  margin-bottom: 30px;
+  padding: 10px 0;
+  background: #dfe3ec;
+  text-align: right;
+}
+
+.splitter-info .buttons {
+  display: inline-block;
+}
+
+.splitter-info-scope {
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: bottom;
+}
+
+.splitter-info-scope b {
+  font-weight: 700;
+}
+
+.performance-tabs {
+  margin-top: 50px;
+  background: #596c99;
+  color: white;
+}
+
+.performance-tabs ul {
+  display: inline-block;
+  list-style: none;
+}
+
+.performance-tabs ul li {
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.performance-tabs ul li.active {
+  background: #7282a8;
+}
 
 /* ICONS CSS ONLY */
 .icon-new {
@@ -164,6 +335,23 @@
   width: 17px;
   height: 17px;
   background: url(../img/claim.png) 50% 50% no-repeat;
+}
+
+.icon-unclaim {
+  width: 18px;
+  height: 18px;
+  background: url(../img/icon-unclaim.png) 50% 50% no-repeat;
+}
+
+.icon-eye {
+  width: 20px;
+  height: 17px;
+  background: url('../img/icon-eye.png') 50% 50% no-repeat;
+}
+.icon-uneye {
+  width: 20px;
+  height: 18px;
+  background: url('../img/icon-uneye.png') 50% 50% no-repeat;
 }
 
 .icon-type-urgent {
@@ -209,6 +397,15 @@
   background: url('../img/icon-info.png') 50% 50% no-repeat;
   vertical-align: -4px;
 }
+
+.icon-datetime {
+  width: 21px;
+  height: 20px;
+  background: url('../img/icon-datetime.png') 50% 50% no-repeat;
+  vertical-align: -4px;
+}
+
+
 
 /* icon modificators */
 span[class^='icon'].muted {

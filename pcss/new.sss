@@ -1,5 +1,26 @@
-// POSSIBLE CONFLICTS
+// GENERIC CLASSES __ RC
+.muted
+  opacity: .5
 
+.mt20
+  margin-top: 20px
+
+.flr
+  float: right
+
+.buttons-two-col
+  &::after
+    display: block
+    content: ' '
+    clear: both
+  .btn
+    &:first-child
+      float: left
+    &:last-child
+      float: right
+
+
+// POSSIBLE CONFLICTS
 .actions
   .buttons
     float: left
@@ -9,6 +30,39 @@
       float: right
       margin-right: 0
 
+h3.title
+  font-size: 20px
+  line-height: 22px
+  color: #5f6062
+  text-transform: uppercase
+  margin: 0 0 20px
+
+b
+  font-weight: bold
+
+.watch-list-item-info
+  li a
+    text-decoration: underline
+  .form-control
+    margin-bottom: 12px
+
+.form-control
+  textarea
+    width: 100%
+    &.h75
+      height: 75px
+
+.row
+  &::after
+    display: block
+    content: ' '
+    clear: both
+  &.p20
+    margin-left: -20px
+    margin-right: -20px
+    > .col
+      padding-left: 20px
+      padding-right: 20px
 
 // NEW STYLES
 .filter
@@ -37,6 +91,11 @@
       &:last-child
         margin-right: auto
 
+.edit-control.auto
+  label
+    float: none
+    width: auto
+    margin-right: 15px
 .actions
   .heading
     &--noStatus
@@ -99,6 +158,67 @@
         &:hover
           text-decoration: none
 
+  &-listMini
+    border-bottom: 1px solid #d6d8dc
+    padding-bottom: 12px
+    margin-bottom: 15px
+    &::after
+      display: block
+      clear: both
+      content: ' '
+    &--condenced
+      margin-bottom: 10px
+      padding-bottom: 10px
+    .alert-listItem-control
+      width: 43px
+      height: 65px
+    .alert-listItem-content
+      width: calc(100% - 45px)
+      padding-left: 20px
+      padding-top: 10px
+      box-sizing: border-box
+      span
+        margin-right: 10px
+      .icon
+        margin-right: 5px
+
+    &-row
+      margin-bottom: 8px
+      &:last-child
+        a
+          text-decoration: underline
+      span
+        margin-right: 15px
+      .icon
+        margin-right: 5px
+
+.splitter-info
+  background: #dfe3ec
+  padding: 10px 0
+  text-align: right
+  margin-bottom: 30px
+  &-scope
+    display: inline-block
+    margin-right: 20px
+    vertical-align: bottom
+    b
+      font-weight: bold
+  .buttons
+    display: inline-block
+
+.performance-tabs
+  margin-top: 50px
+  background: #596c99
+  color: white
+  ul
+    list-style: none
+    display: inline-block
+    li
+      display: inline-block
+      padding: 10px 20px
+      cursor: pointer
+      &.active
+        background: #7282a8
 
 // ICONS CSS ONLY
 .icon-new
@@ -114,6 +234,17 @@
 .icon-claim
   background: url(../img/claim.png) 50% 50% no-repeat
   size: 17px
+
+.icon-unclaim
+  background: url(../img/icon-unclaim.png) 50% 50% no-repeat
+  size: 18px
+
+.icon-eye
+  background: url('../img/icon-eye.png') 50% 50% no-repeat
+  size: 20px 17px
+.icon-uneye
+  background: url('../img/icon-uneye.png') 50% 50% no-repeat
+  size: 20px 18px
 
 .icon-type-urgent
   background: url('../img/icon-priority.png') 50% 50% no-repeat
@@ -143,6 +274,14 @@
   width: 21px
   height: 20px
   vertical-align: -4px
+
+.icon-datetime
+  background: url('../img/icon-datetime.png') 50% 50% no-repeat
+  width: 21px
+  height: 20px
+  vertical-align: -4px
+
+
 
 // icon modificators
 span[class^='icon'].muted
