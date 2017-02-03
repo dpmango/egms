@@ -48,6 +48,10 @@ h3.title {
   line-height: 22px;
 }
 
+div#ui-datepicker-div {
+  z-index: 101 !important;
+}
+  
 b {
   font-weight: 700;
 }
