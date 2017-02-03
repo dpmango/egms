@@ -1565,6 +1565,7 @@ input.datepicker {
 
 .icon-save {
   background: url(../img/checked.png) 50% 50% no-repeat;
+  background-size: 16px 16px;
 }
 
 .btn.disabled .icon-save,
