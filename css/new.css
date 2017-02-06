@@ -6,7 +6,14 @@
 .mt20 {
   margin-top: 20px;
 }
+.mt30 {
+  margin-top: 30px;
+}
+.mt40 {
+  margin-top: 40px;
+}
 
+  
 .flr {
   float: right;
 }
@@ -51,7 +58,7 @@ h3.title {
 div#ui-datepicker-div {
   z-index: 101 !important;
 }
-  
+
 b {
   font-weight: 700;
 }
@@ -292,6 +299,7 @@ b {
 
 .alert-listMini-row:last-child a {
   text-decoration: underline;
+  font-family: 'robotoregular';
 }
 
 .splitter-info {
