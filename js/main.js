@@ -7,22 +7,22 @@ $(function() {
     $('.datepicker').datepicker({
         dateFormat: 'dd M yy'
     });
-    
 
-    
+
+
     $(document).click(function(event) {
         if (!$(event.target).closest(".btn.dropdown.active").length) {
             $('.btn.dropdown').removeClass('active');
         }
     });
-    
+
     $(document).on('click', '.btn.dropdown li', function () {
         $(this).closest('.dropdown').removeClass('active');
     });
-    
+
     $('.btn.dropdown').click(function(){
         $('.btn.dropdown.active').removeClass('active');
-        
+
         $(this).addClass('active')
     })
 
@@ -58,4 +58,25 @@ function filterSelectInit() {
             $('.filter-select').removeClass('collapsed');
         }
     });
+
 }
+
+$(document).ready(function(){
+  var collapsed = 0;
+  $('.dashboard-left li.collapse').on('click', function(e){
+    console.log('trig1');
+    if (collapsed == 0){
+      console.log('TRUE');
+      $(this).closest('.dashboard-left').addClass('collapsed');
+      collapsed = 1;
+    }
+    e.stopPropagation();
+  });
+  $('.dashboard-left').on('click', function(e){
+    if (collapsed == 1){
+      $('.dashboard-left').removeClass('collapsed');
+      collapsed = 0;
+    }
+  });
+
+});

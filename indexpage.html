@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>eGMS</title>
+  <link href="css/jquery-ui.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/new.css" rel="stylesheet">
+  <script src="js/jquery-3.1.0.min.js">
+  </script>
+  <script src="js/jquery-ui.min.js">
+  </script>
+  <script src="js/jquery.formstyler.min.js">
+  </script>
+  <script src="js/main.js">
+  </script>
+</head>
+<body>
+  <div class="header">
+    <ul class="nav">
+      <li>
+        <a href="#">Plotting</a>
+      </li>
+      <li>
+        <a href="#">Data Export</a>
+      </li>
+      <li>
+        <a href="#">Operator Management</a>
+      </li>
+      <li>
+        <a href="#">Alerts</a>
+      </li>
+      <li>
+        <a href="#">Maintenance Actions</a>
+      </li>
+      <li class="current">
+        <a href="#">Watch List</a>
+      </li>
+      <li>
+        <a href="#">Reporting</a>
+      </li>
+      <li>
+        <a href="#">Customer Motification Reports</a>
+      </li>
+    </ul><strong class="logo"><a href="index.html">eGMS</a></strong>
+  </div>
+  <div class="main">
+    <div class="container">
+      <h2>Watch List</h2>
+      <div class="filter">
+        <div class="form-control">
+          <label>Carrier</label> <select>
+            <option value="0">
+              Aeroflot
+            </option>
+            <option value="1">
+              Boeing
+            </option>
+            <option value="2">
+              Boeing 2
+            </option>
+          </select>
+        </div>
+        <div class="form-control">
+          <label>Aircraft</label> <select>
+            <option value="0">
+              All
+            </option>
+            <option value="1">
+              FHY-RTI
+            </option>
+            <option value="2">
+              FTA-RMX
+            </option>
+          </select>
+        </div>
+        <div class="form-control">
+          <label>Engine</label>
+          <div class="filter-select">
+            <span class="filter-select-value">767003</span> <span class="filter-select-trigger"></span>
+            <div class="dropdown">
+              <ul class="filter-list">
+                <li><span>Filter</span>767003</li>
+                <li class="selected"><span>Filter</span>767004</li>
+              </ul>
+              <ul class="addition-list">
+                <li>
+                  <a class="add-filter" href="#">Add</a>767003
+                </li>
+                <li>
+                  <a class="add-filter" href="#">Add</a>767003
+                </li>
+                <li>
+                  <a class="add-filter" href="#">Add</a>767003
+                </li>
+                <li>
+                  <a class="add-filter" href="#">Add</a>23545
+                </li>
+                <li>
+                  <a class="add-filter" href="#">Add</a>567343
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="form-control">
+          <label>From</label> <input class="datepicker" type="text">
+        </div>
+        <div class="form-control">
+          <label>To</label> <input class="datepicker" type="text">
+        </div>
+        <div class="form-control">
+          <label class="checkbox-label"><input type="checkbox">Show archived items</label>
+        </div>
+      </div>
+      <div class="actions">
+        <div class="heading">
+          <h3>Actions</h3><span class="status">1 item selected</span>
+        </div>
+        <div class="buttons">
+          <a class="btn" href="#"><span class="icon icon-export"></span>Export</a> <a class="btn" href="#"><span class="icon icon-remove"></span>Archive</a>
+        </div>
+      </div>
+      <div class="wide-table-container watch-list">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Carrier <span class="sorting_asc"></span></th>
+              <th>Aircraft ID</th>
+              <th>Position</th>
+              <th>ESN</th>
+              <th>Start Date</th>
+              <th>Stop Date</th>
+              <th>Remain</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><label class="checkbox-label"><input checked="checked" type="checkbox"></label></td>
+              <td>Aeroflot</td>
+              <td>FHY-RTY</td>
+              <td>2</td>
+              <td>767003</td>
+              <td>02 Aug 2016</td>
+              <td>06 Aug 2016</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td><label class="checkbox-label"><input type="checkbox"></label></td>
+              <td>Aeroflot</td>
+              <td>FHY-RTY</td>
+              <td>2</td>
+              <td>767003</td>
+              <td>02 Aug 2016</td>
+              <td>06 Aug 2016</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td><label class="checkbox-label"><input type="checkbox"></label></td>
+              <td>Aeroflot 2</td>
+              <td>FHY-RTY</td>
+              <td>2</td>
+              <td>767003</td>
+              <td>02 Aug 2016</td>
+              <td>06 Aug 2016</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td><label class="checkbox-label"><input checked="checked" type="checkbox"></label></td>
+              <td>Aeroflot</td>
+              <td>FHY-RTY</td>
+              <td>2</td>
+              <td>767003</td>
+              <td>02 Aug 2016</td>
+              <td>06 Aug 2016</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td><label class="checkbox-label"><input type="checkbox"></label></td>
+              <td>Aeroflot</td>
+              <td>FHY-RTY</td>
+              <td>2</td>
+              <td>767003</td>
+              <td>02 Aug 2016</td>
+              <td>06 Aug 2016</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td><label class="checkbox-label"><input type="checkbox"></label></td>
+              <td>Aeroflot</td>
+              <td>FHY-RTY</td>
+              <td>2</td>
+              <td>767003</td>
+              <td>02 Aug 2016</td>
+              <td>06 Aug 2016</td>
+              <td>4</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

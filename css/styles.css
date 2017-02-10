@@ -1109,6 +1109,8 @@ h2 {
 
 :not(.tags) > input[type="text"],
 input[type="number"],
+input[type='email'],
+input[type='password'],
 .multivalue {
   display: inline-block;
   background: #fff;

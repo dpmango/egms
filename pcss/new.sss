@@ -9,7 +9,7 @@
 .mt40
   margin-top: 40px
 
-  
+
 .flr
   float: right
 
@@ -63,6 +63,19 @@ b
     width: 175px
 
 .form-control
+  &.fullwidth
+    margin-bottom: 10px
+    input, textarea
+      width: 100%
+    textarea
+      display: inline-block
+      height: 175px
+      font-size: 16px
+      line-height: 1.3em
+    .jqselect
+      margin-top: 2px
+      margin-bottom: 1px
+
   textarea
     width: 100%
     &.h75
@@ -317,3 +330,246 @@ b
 // icon modificators
 span[class^='icon'].muted
   opacity: .35
+
+// CNR
+.files-upload
+  &.fullwidth
+    width: 100%
+  .dz-message
+    text-align: center
+
+// LOGIN
+.login-bg
+  background: url('../img/loginBG.png') no-repeat center
+  background-size: cover
+  min-height: 100%
+  position: relative
+  min-height: 100vh
+  min-width: 1200px
+  @media(height <= 600px)
+    min-height: 600px
+  .header
+    background: transparent
+    box-shadow: none
+    border: none
+  .container-2
+    margin-top: 20vh
+
+.login
+  &-info
+    font-size: 16px
+    padding-left: 40px
+    padding-right: 30px
+    line-height: 24px
+    color: color(black a(60%))
+  .fullwidth
+    margin-bottom: 20px
+
+    &.valid-error
+      input
+        border: 2px solid #cc1b30
+    label
+      font-size: 16px
+      font-family: 'robotoregular'
+    label span
+      text-transform: none
+      float: right
+    input
+      font-size: 24px
+      height: 44px
+      line-height: 44px
+  &-cta
+    &-forgot
+      font-size: 16px
+      text-decoration: underline
+      margin-left: 20px
+      font-family: 'robotoregular'
+
+.validation-message
+  background: #cc1b30
+  color: white
+  padding: 9px 10px
+  border-radius: 3px
+  font-size: 16px
+  margin-top: 5px
+  font-family: 'robotoregular'
+  a
+    text-decoration: underline
+    float: right
+    color: white
+    transition: all .3s ease-in-out
+    font-family: 'robotoregular'
+    &:hover
+      opacity: .7
+
+.footer
+  position: absolute
+  bottom: 20px
+  width: calc(100% - 50px)
+  left: 0
+  margin-left: 25px
+  margin-right: 25px
+  color: color(black a(60%))
+  box-sizing: border-box
+  max-width: 100%
+  &-copy
+    float: left
+  &-time
+    text-align: right
+    text-align: right
+    padding-right: 00px
+
+
+// DASHBOARD
+.dashboard-bg
+  background: #dadde5
+  .main
+    display: flex
+
+  .header
+    margin-bottom: 0
+
+.dashboard-left
+  background: #666f80
+  float: left
+  width: 24%
+  color: white
+  transition: all .5s ease
+  flex: 0 1 24%
+  &.collapsed
+    margin-left: -20%
+  a
+    color: white
+  ul
+    margin-top: 10px
+    margin-bottom: 50px
+    li
+      display: block
+      a
+        padding: 12px 20px
+        background: #525966 url('../img/dash-left-carret.png') no-repeat 95% center
+        border-bottom: 1px solid #7d8493
+        display: block
+        color: white
+        transition: all .4s ease-in-out
+        &:hover
+          background-color: #3f454f
+          text-decoration: none
+      &.no-carret
+        a
+          background: #525966
+          &:hover
+            background-color: #3f454f
+      &.collapse
+        a
+          background: #7e899e
+          &:hover
+            background: color(#7e899e a(70%))
+
+  &-group
+    padding-top: 10px
+    &:first-child
+      padding-bottom: 10px
+
+
+.dashboard-right
+  position: relative
+  float: left
+  width: calc(76% - 30px)
+  flex: 1 1 auto
+  padding-left: 30px
+  .footer
+    padding-top: 50px
+    opacity: 1
+  &-head
+    font-size: 30px
+    margin-top: 30px
+  .ico-close
+    size: 38px
+    background: url('../img/ico-close.png') no-repeat center
+    vertical-align: middle
+    margin-right: 10px
+
+
+.dashboard-navi
+  margin-top: 30px
+  margin-right: 40px
+  font-size: 0px
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-start
+  &-item
+    font-size: 0
+    flex: 0 1 25%
+    display: inline-block
+    background: white
+    margin-right: 2%
+    padding: 25px
+    box-shadow: 0 8px 20px color(#596c99 (a20%))
+    border-radius: 4px
+    margin-bottom: 25px
+    text-align: center
+    transition: box-shadow .5s ease-out
+    &:hover
+      box-shadow: none
+    img
+      display: inline-block
+      max-width: 100%
+    span
+      display: block
+      text-align: center
+      margin-top: 20px
+      color: #000000
+      font: 20px/22px 'oswaldregular'
+      text-transform: uppercase
+
+
+
+// DASH IMG
+.dash-ico
+  background-repeat: no-repeat
+  background-size: contain
+  vertical-align: middle
+  margin-right: 10px
+  width: 25px !important
+
+
+.ico-dash-portal
+  background: url(../img/ico-dash-portal.png) no-repeat center
+  size: 25px
+.ico-nacelle
+  background: url(../img/sprites/ico-nacelle.png) no-repeat center
+  size: 20px 25px
+.ico-forum
+  background: url(../img/sprites/ico-forum.png) no-repeat center
+  size: 23px 21px
+.ico-collaboration
+  background: url(../img/sprites/ico-collaboration.png) no-repeat center
+  size: 25px
+.ico-support
+  background: url(../img/sprites/ico-support.png) no-repeat center
+  size: 21px 22px
+.ico-product
+  background: url(../img/sprites/ico-product.png) no-repeat center
+  size: 25px 23px
+.ico-tech
+  background: url(../img/sprites/ico-tech.png) no-repeat center
+  size: 25px 19px
+.ico-materials
+  background: url(../img/sprites/ico-materials.png) no-repeat center
+  size: 16px 23px
+.ico-communcation
+  background: url(../img/sprites/ico-communication.png) no-repeat center
+  size: 20px
+.ico-business
+  background: url(../img/sprites/ico-business.png) no-repeat center
+  size: 26px 20px
+.ico-fleet
+  background: url(../img/sprites/ico-fleet.png) no-repeat center
+  size: 18px 16px
+.ico-website
+  background: url(../img/sprites/ico-csutomer-website.png) no-repeat center
+  size: 23px 20px
+.ico-collapse-menu
+  background: url(../img/sprites/ico-collpasemeunu.png) no-repeat center
+  size: 23px

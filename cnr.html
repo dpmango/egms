@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>eGMS</title>
+  <link href="css/jquery-ui.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/chartist.css" rel="stylesheet">
+  <link href="css/dropzone.css" rel="stylesheet">
+  <link href="css/new.css" rel="stylesheet">
+  <script src="js/jquery-3.1.0.min.js">
+  </script>
+  <script src="js/jquery-ui.min.js">
+  </script>
+  <script src="js/jquery.formstyler.min.js">
+  </script>
+  <script src="js/chartist.min.js">
+  </script>
+  <script src="js/dropzone.js">
+  </script>
+  <script src="js/main.js">
+  </script>
+</head>
+<body>
+  <div class="header">
+    <ul class="nav">
+      <li>
+        <a href="#">Plotting</a>
+      </li>
+      <li>
+        <a href="#">Data Export</a>
+      </li>
+      <li>
+        <a href="#">Operator Management</a>
+      </li>
+      <li>
+        <a href="#">Alerts</a>
+      </li>
+      <li>
+        <a href="#">Maintenance Actions</a>
+      </li>
+      <li>
+        <a href="#">Watch List</a>
+      </li>
+      <li>
+        <a href="#">Reporting</a>
+      </li>
+      <li>
+        <a href="#">Customer Motification Reports</a>
+      </li>
+    </ul><strong class="logo"><a href="index.html">eGMS</a></strong>
+  </div>
+  <div class="main">
+    <div class="container-2">
+      <h2>Generate CNR</h2>
+    </div>
+    <div class="selected-tabs">
+      <!-- tabs-content это целый блок, класс active показывает либо скрывает блок -->
+      <div class="tabs-content active">
+        <div class="tabs-title">
+          <div class="container-2">
+            <a class="tab-name">General Information</a>
+          </div>
+        </div>
+        <div class="tabs-conteiner active">
+          <div class="container-2 container-padding">
+            <div class="box">
+              <div class="row mt20">
+                <div class="col">
+                  <div class="form-control fullwidth">
+                    <label>CNR Number</label>
+                    <input type="text">
+                  </div>
+                  <div class="form-control fullwidth">
+                    <label>Priority</label> <select>
+                      <option value="0">
+                        Normal
+                      </option>
+                      <option value="1">
+                        Medium
+                      </option>
+                      <option value="2">
+                        High
+                      </option>
+                    </select>
+                  </div>
+                  <div class="form-control fullwidth">
+                    <label>Airline/customer</label> <select>
+                      <option value="0">
+                        Interjet
+                      </option>
+                      <option value="1">
+                        jet
+                      </option>
+                      <option value="2">
+                        jet
+                      </option>
+                    </select>
+                  </div>
+                  <div class="form-control fullwidth">
+                    <label>Aircraft type</label>
+                    <input type="text">
+                  </div>
+                  <div class="form-control fullwidth">
+                    <label>Aircraft tail</label>
+                    <input type="text">
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="form-control fullwidth">
+                    <label>Date</label> <input class="datepicker" type="text">
+                  </div>
+                  <div class="form-control fullwidth">
+                    <label>Engine Type</label>
+                    <input type="text">
+                  </div>
+                  <div class="form-control fullwidth">
+                    <label>Engine Position</label>
+                    <input type="text">
+                  </div>
+                  <div class="form-control fullwidth">
+                    <label>ESN</label>
+                    <input type="text">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="splitter"></div>
+          <div class="container-2">
+            <div class="query-form-bottom">
+              <div class="form-control">
+                <button class="btn min-width margin-left">Cancel</button>
+                <button class="btn btn-primary min-width margin-left"><span class="icon icon-save"></span>Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tabs-content active">
+        <div class="tabs-title active">
+          <div class="container-2">
+            <a class="tab-name">Observation</a>
+          </div>
+        </div>
+        <div class="tabs-conteiner active">
+          <div class="container-2 container-padding-3">
+            <div class="box">
+              <div class="row">
+                <div class="form-control fullwidth">
+                  <textarea name="" id="" cols="30" rows="10" class="form-control">The subject engine has been experiencing a “Sudden shift in core vibration-2”. There has been a <shift type> in<parameter>, <parameter> and <parameter> while <parameter> remain stable.</textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="splitter"></div>
+          <div class="container-2">
+            <div class="query-form-bottom">
+              <div class="form-control">
+                <button class="btn min-width margin-left"><span class="icon icon-back"></span>Back</button> <button class="btn btn-primary min-width margin-left"><span class="icon icon-save"></span>Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tabs-content active">
+        <div class="tabs-title active">
+          <div class="container-2">
+            <a class="tab-name">Supporting attachments</a>
+          </div>
+        </div>
+        <div class="tabs-conteiner">
+          <div class="container-2 container-padding-3">
+            <div class="box no-margin">
+              <div class="row">
+                <div class="files-upload fullwidth">
+                  <form action="/file-upload"
+                        class="dropzone"
+                        id="my-awesome-dropzone">
+
+                  </form>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="splitter"></div>
+          <div class="container-2">
+            <div class="query-form-bottom">
+              <div class="form-control">
+                <button class="btn min-width margin-left"><span class="icon icon-back"></span>Back</button> <button class="btn btn-primary min-width margin-left"><span class="icon icon-save"></span>Generate PDF</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
