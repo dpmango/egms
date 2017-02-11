@@ -21,12 +21,12 @@
   <script src="js/main.js">
   </script>
 </head>
-<body class="dashboard-bg">
+<body class="dashboard-bg dashboard-bg--light">
   <div class="header">
     <strong class="logo"><a href="index.html">eGMS</a></strong>
   </div>
   <div class="main">
-    <div class="dashboard-left">
+    <div class="dashboard-left collapsed">
       <ul>
         <li class="dashboard-left-group">
           <a href="#">
@@ -110,32 +110,159 @@
       </ul>
     </div>
     <div class="dashboard-right">
-      <div class="dashboard-right-head">
-        <i class="icon ico-close"></i>
-        Business Management
+
+      <div class="selected-tabs">
+        <div class="tabs-content active">
+          <div class="container-900">
+            <div class="dashboard-right-head">
+              My profile
+              <div class="form-control flr">
+                <button class="btn btn-primary min-width margin-left"><span class="icon icon-edit"></span>Modify</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tabs-title mt30">
+            <div class="container-900">
+              <a class="tab-name">My Entry</a>
+            </div>
+          </div>
+          <div class="tabs-conteiner active">
+            <div class="container-900 container-padding">
+              <div class="box">
+                <div class="row mt20">
+                  <div class="col col-1-3">
+                    <div class="form-control fullwidth">
+                      <label>Profile photo</label>
+                      <img src="img/profilePhoto.png" alt="">
+                    </div>
+                  </div>
+
+                  <div class="col col-2-3">
+                    <div class="form-control fullwidth">
+                      <label>Name</label>
+                      <input type="text">
+                    </div>
+                    <div class="form-control fullwidth">
+                      <label>Surname</label>
+                      <input type="text">
+                    </div>
+                    <div class="form-control fullwidth">
+                      <label>Email</label>
+                      <input type="email">
+                    </div>
+                    <div class="form-control fullwidth">
+                      <label>Phone</label>
+                      <input type="text">
+                    </div>
+                    <div class="form-control fullwidth">
+                      <label>Fax</label>
+                      <input type="text">
+                    </div>
+                    <div class="form-control fullwidth">
+                      <label>Mobile</label>
+                      <input type="text">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- next section -->
+        <div class="tabs-content active">
+          <div class="tabs-title mt30">
+            <div class="container-900">
+              <a class="tab-name">My Company Map</a>
+            </div>
+          </div>
+          <div class="tabs-conteiner active">
+            <div class="container-900 container-padding">
+              <div class="box">
+                <div class="row mt20">
+                  <div class="col">
+                    <div class="form-control fullwidth">
+                      <label>Business Name</label>
+                      <input type="text">
+                    </div>
+                    <div class="form-control fullwidth">
+                      <label>Contractual Name</label>
+                      <input type="text">
+                    </div>
+                    <div class="form-control fullwidth">
+                      <label>Country</label>
+                      <input type="text">
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="form-control fullwidth">
+                      <label>Company code</label>
+                      <input type="text">
+                    </div>
+                    <div class="form-control fullwidth">
+                      <label>ICAO Code</label>
+                      <input type="text">
+                    </div>
+                    <div class="form-control fullwidth">
+                      <label>Origin</label>
+                      <input type="text">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- next section -->
+        <div class="tabs-content active">
+          <div class="tabs-title mt30">
+            <div class="container-900">
+              <a class="tab-name">Support Contacts</a>
+            </div>
+          </div>
+          <div class="tabs-conteiner active">
+            <div class="container-900 container-padding">
+              <div class="box">
+                <div class="row mt20">
+                  <div class="col">
+                    <div class="support-contact">
+                      <img src="img/supportcontact.png" alt="">
+                      <div class="support-contact-name">Evgeny Kuznetcov</div>
+                      <div class="support-contact-mail">evgenykuznetcov@jet.com</div>
+                      <div class="support-contact-phone">+7 916 643-12-72</div>
+                    </div>
+                    <div class="support-contact">
+                      <img src="img/supportcontact.png" alt="">
+                      <div class="support-contact-name">Evgeny Kuznetcov</div>
+                      <div class="support-contact-mail">evgenykuznetcov@jet.com</div>
+                      <div class="support-contact-phone">+7 916 643-12-72</div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="support-contact">
+                      <img src="img/supportcontact.png" alt="">
+                      <div class="support-contact-name">Evgeny Kuznetcov</div>
+                      <div class="support-contact-mail">evgenykuznetcov@jet.com</div>
+                      <div class="support-contact-phone">+7 916 643-12-72</div>
+                    </div>
+                    <div class="support-contact">
+                      <img src="img/supportcontact.png" alt="">
+                      <div class="support-contact-name">Evgeny Kuznetcov</div>
+                      <div class="support-contact-mail">evgenykuznetcov@jet.com</div>
+                      <div class="support-contact-phone">+7 916 643-12-72</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <div class="dashboard-navi">
-        <a href='#' class="dashboard-navi-item">
-          <img src="img/dummy-icon.png" alt="">
-          <span>Warranty</span>
-        </a>
-        <a href='#' class="dashboard-navi-item">
-          <img src="img/dummy-icon.png" alt="">
-          <span>Customer Information</span>
-        </a>
-        <a href='#' class="dashboard-navi-item">
-          <img src="img/dummy-icon.png" alt="">
-          <span>Customer Referential</span>
-        </a>
-        <a href='#' class="dashboard-navi-item">
-          <img src="img/dummy-icon.png" alt="">
-          <span>Commitment Letter</span>
-        </a>
-        <a href='#' class="dashboard-navi-item">
-          <img src="img/dummy-icon.png" alt="">
-          <span>Hub Administration</span>
-        </a>
-      </div>
+
+
       <div class="footer">
         <div class="footer-copy">
           Power Jet is a join company of Safran Aircraft Engines (Safran group, France) and NPO Satum (Russia)<br>

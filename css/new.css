@@ -462,7 +462,12 @@ b {
   vertical-align: -4px;
 }
 
-
+.icon-edit {
+  width: 18px;
+  height: 18px;
+  background-image: url(../img/icon-edit.png);
+  vertical-align: -2px;
+}
 
 /* icon modificators */
 span[class^='icon'].muted {
@@ -586,30 +591,65 @@ span[class^='icon'].muted {
 .footer-time {
   padding-right: 00px;
   text-align: right;
-  text-align: right;
 }
 
 
 /* DASHBOARD */
+.container-900 {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+  width: 900px;
+}
+.row .col-1-3 {
+  width: 33%;
+}
+.row .col-2-3 {
+  width: 66%;
+}
+
 .dashboard-bg {
   background: #dadde5;
 }
+
 .dashboard-bg .main {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
+
 .dashboard-bg .header {
   margin-bottom: 0;
 }
 
+.dashboard-bg .form-control input {
+  background: #e6e6e6;
+}
+
+.dashboard-bg .form-control input:focus {
+  background: white;
+}
+
+.dashboard-bg--light {
+  background: #eef0f5;
+}
+
+.dashboard-bg--light .dashboard-right {
+  padding-left: 1px;
+}
+
+.dashboard-bg--light .footer {
+  position: relative;
+}
+
 .dashboard-left {
-  -webkit-flex: 0 1 24%;
-      -ms-flex: 0 1 24%;
-          flex: 0 1 24%;
+  -webkit-flex: 0 1 300px;
+      -ms-flex: 0 1 300px;
+          flex: 0 1 300px;
   float: left;
-  width: 24%;
+  width: 300px;
   background: #666f80;
   color: white;
   -webkit-transition: all .5s ease;
@@ -632,7 +672,9 @@ span[class^='icon'].muted {
 
 .dashboard-left ul li a {
   display: block;
+  margin-top: -1px;
   padding: 12px 20px;
+  border-top: 1px solid #7d8493;
   border-bottom: 1px solid #7d8493;
   background: #525966 url('../img/dash-left-carret.png') no-repeat 95% center;
   color: white;
@@ -662,7 +704,26 @@ span[class^='icon'].muted {
 }
 
 .dashboard-left.collapsed {
-  margin-left: -20%;
+  -webkit-flex: 0 0 50px;
+      -ms-flex: 0 0 50px;
+          flex: 0 0 50px;
+  width: 50px;
+  -webkit-box-flex: 0;
+}
+
+.dashboard-left.collapsed .collapse .ico {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.dashboard-left.collapsed a {
+  padding-left: 10px;
+  background: #525966 url('../img/dash-left-carret-small.svg') no-repeat 95% 95%;
+}
+
+.dashboard-left.collapsed a span {
+  display: none;
 }
 
 .dashboard-left-group {
@@ -672,7 +733,6 @@ span[class^='icon'].muted {
 .dashboard-left-group:first-child {
   padding-bottom: 10px;
 }
-
 
 .dashboard-right {
   position: relative;
@@ -686,12 +746,10 @@ span[class^='icon'].muted {
   -webkit-box-flex: 1;
 }
 
-
 .dashboard-right .footer {
   padding-top: 50px;
   opacity: 1;
 }
-
 
 .dashboard-right .ico-close {
   margin-right: 10px;
@@ -701,10 +759,18 @@ span[class^='icon'].muted {
   vertical-align: middle;
 }
 
+.dashboard-right .form-control img {
+  max-width: 100%;
+}
 
 .dashboard-right-head {
   margin-top: 30px;
   font-size: 30px;
+  font-family: 'oswaldregular';
+}
+
+.dashboard-right-head .flr {
+  margin-top: -8px;
 }
 
 
@@ -845,4 +911,61 @@ span[class^='icon'].muted {
   width: 23px;
   height: 23px;
   background: url(../img/sprites/ico-collpasemeunu.png) no-repeat center;
+}
+
+/* SUPPORT */
+.support-contact {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  background: white;
+}
+.support-contact img {
+  float: left;
+  margin-right: 13px;
+  max-width: 100%;
+}
+.support-contact::after {
+  display: block;
+  clear: both;
+  content: ' ';
+}
+.support-contact-name {
+  margin: 10px 0 15px 0;
+  font-size: 20px;
+}
+.support-contact-mail {
+  text-decoration: underline;
+  font-size: 16px;
+  font-family: 'robotoregular';
+}
+.support-contact-mail::before {
+  display: inline-block;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background: url('../img/icon-contact-phone.png') no-repeat center;
+  content: ' ';
+  vertical-align: middle;
+}
+.support-contact-mail:hover {
+  text-decoration: none;
+}
+.support-contact-phone {
+  margin-top: 12px;
+  text-decoration: underline;
+  font-size: 16px;
+  font-family: 'robotoregular';
+}
+.support-contact-phone::before {
+  display: inline-block;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background: url('../img/icon-contact-mail.png') no-repeat center;
+  content: ' ';
+  vertical-align: -4px;
+}
+.support-contact-phone:hover {
+  text-decoration: none;
 }

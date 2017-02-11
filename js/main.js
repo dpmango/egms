@@ -62,20 +62,15 @@ function filterSelectInit() {
 }
 
 $(document).ready(function(){
-  var collapsed = 0;
+
   $('.dashboard-left li.collapse').on('click', function(e){
-    console.log('trig1');
-    if (collapsed == 0){
-      console.log('TRUE');
-      $(this).closest('.dashboard-left').addClass('collapsed');
-      collapsed = 1;
-    }
+    $(this).closest('.dashboard-left').toggleClass('collapsed');
     e.stopPropagation();
   });
+
   $('.dashboard-left').on('click', function(e){
-    if (collapsed == 1){
+    if ($(this).is('.collapsed')){
       $('.dashboard-left').removeClass('collapsed');
-      collapsed = 0;
     }
   });
 
