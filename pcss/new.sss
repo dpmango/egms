@@ -9,6 +9,8 @@
 .mt40
   margin-top: 40px
 
+.min-width-220
+  min-width: 230px
 
 .flr
   float: right
@@ -442,7 +444,7 @@ span[class^='icon'].muted
       opacity: .7
 
 .footer
-  position: absolute
+  position: relative
   bottom: 20px
   width: calc(100% - 50px)
   left: 0
@@ -498,7 +500,7 @@ span[class^='icon'].muted
 .dashboard-left
   background: #666f80
   float: left
-  min-height: 100vh
+  min-height: calc(100vh - 72px)
   width: 300px
   color: white
   transition: all .5s ease
@@ -533,6 +535,8 @@ span[class^='icon'].muted
     margin-bottom: 50px
     li
       display: block
+      max-height: 54px
+      overflow: hidden
       a
         padding: 14px 20px 14px 17px
         background: #525966 url('../img/dash-left-carret.png') no-repeat 95% center
@@ -545,6 +549,7 @@ span[class^='icon'].muted
         font-family: 'oswaldregular'
         text-transform: uppercase
         font-size: 16px
+        white-space: nowrap
         span
           vertical-align: middle
         &:hover
@@ -573,6 +578,13 @@ span[class^='icon'].muted
   width: calc(76% - 30px)
   flex: 1 1 auto
   padding-left: 30px
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  .container
+    flex: 1
   .footer
     padding-top: 50px
     opacity: 1
@@ -601,7 +613,8 @@ span[class^='icon'].muted
   justify-content: flex-start
   &-item
     font-size: 0
-    flex: 0 1 25%
+    box-sizing: border-box
+    flex: 0 1 290px
     display: inline-block
     background: white
     margin-right: 2%
@@ -678,7 +691,8 @@ span[class^='icon'].muted
 .icon-logout
   background: url('../img/ico-logout.png') no-repeat center
   size: 19px
-  vertical-align: middle
+  vertical-align: top
+  margin-right: 5px
   background-size: cover
 
 // SUPPORT

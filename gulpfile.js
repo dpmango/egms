@@ -6,6 +6,7 @@ var sourcemaps    = require('gulp-sourcemaps');
 var autoprefixer  = require('autoprefixer');
 var sugarss       = require('sugarss');
 var precss        = require('precss');
+var uncss         = require('gulp-uncss');
 var sorting       = require('postcss-sorting');
 var cssnext       = require('postcss-cssnext');
 var short         = require('postcss-short');
@@ -63,6 +64,20 @@ gulp.task('postcss', function() {
       .pipe(browserSync.reload({
         stream: true
       }));
+});
+
+gulp.task('uncss', function() {
+  return gulp.src([
+      'css/styles.css',
+      'css/new.css'
+    ])
+    .pipe(uncss({
+      html: [
+        'http://localhost:3000/profile-nav.html',
+        'http://localhost:3000/my-profile.html'
+      ]
+    }))
+    .pipe(gulp.dest('css-mini/'));
 });
 
 gulp.task('pug', function buildHTML() {

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>eGMS</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/jquery.modal.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="assets/selectize.default.css">
+    <link rel="stylesheet" href="assets/select.css">
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
+    <script src="js/jquery.modal.min.js"></script>
+    <script src="js/dropzone.js"></script>
+    <script src="js/main.js"></script>
+    <script src="assets/angular.js"></script>
+    <script src="assets/angular-sanitize.js"></script>
+    <script src="assets/demo.js"></script>
+    <script src="assets/select.js"></script>
+
+    
+</head>
+<body ng-app="demo" ng-controller="DemoCtrl as ctrl">
+<div class="header">
+    <ul class="nav">
+        <li><a href="#">Plotting</a></li>
+        <li><a href="#">Data Export</a></li>
+        <li><a href="#">Operator Management</a></li>
+        <li><a href="#">Alerts</a></li>
+        <li><a href="#">Maintenance Actions</a></li>
+        <li class="current"><a href="#">Watch List</a></li>
+        <li><a href="#">Reporting</a></li>
+        <li><a href="#">Customer Motification Reports</a></li>
+    </ul>
+    <strong class="logo">
+        <a href="index.html">eGMS</a>
+    </strong>
+</div>
+
+<div class="main">
+    <div class="container">
+        <div class="header-title-with-buttons clearfix">
+            <h2>Operator Management</h2>
+            <div class="buttons">
+                <a href="#modal-add" rel="modal:open" class="btn"><span class="icon icon-pluso"></span>New operator</a>
+            </div>
+        </div>
+        
+        <div class="actions">
+            <div class="heading">
+                <h3>Actions</h3>
+                <span class="status">1 item selected</span>
+            </div>
+            <div class="buttons left">
+                <a href="#" class="btn"><span class="icon icon-export"></span>Export</a>
+                <a href="#" class="btn"><span class="icon icon-remove"></span>Delete</a>
+            </div>
+            <div class="buttons right with-forms">
+                <div class="form-control valid-error" style="width: 310px;">
+                    <label>From</label>
+                    <input type="text"/>
+                    <span class="valid-bubble">Wrong data value</span>
+                </div>
+                <a href="#" class="btn"><span class="icon icon-search"></span>Search</a>
+            </div>
+        </div>
+		
+		
+		
+
+		
+		<!-- Вообшем суть такова, не сушествует таблиц из дивов, вот ниже вариант это жалкое подобие на таблицу, что-бы она выгледела как таблица то уже нужно химичить со скриптом! -->
+		<!-- Даже со скриптом это будет еше та делема! оно вам надо было?))
+		<div class="wide-table-container">
+			<div class="div-table">
+				<div class="div-row head">
+					<div class="div-cell">&nbsp;</div>
+                    <div class="div-cell">CWP OPERATOR NAME<span class="sorting_asc"></span></div>
+                    <div class="div-cell">CWP OPERATOR ID</div>
+                    <div class="div-cell">GMS OPERATOR NAME</div>
+                    <div class="div-cell">GMS OPERATOR ID</div>
+                    <div class="div-cell">SNECMA ZONE</div>
+					<div class="div-cell">SATURN ZONE</div>
+				</div>
+				<div class="div-row body">
+					<div class="div-cell">
+                        <label class="checkbox-label"><input type="checkbox" checked="checked"></label>
+                    </div>
+                    
+                    <div class="div-cell" style="width: 20%; margin-right: 50px">
+                        <div class="form-control">
+                            <div class="input-selected jq-selectbox">
+                                <input type="text" value="Aeroflot" />
+                                
+                                <div class="jq-selectbox__dropdown">
+                                    <ul>
+                                        <li class="sel selected">All</li>
+                                        <li>w ert wert </li>
+                                        <li>we rtwe rtw ert </li>
+                                        <li>wer twert wert wert </li>
+                                        <li>FTA-RMX</li>
+                                        <li>FHY-RTI</li>
+                                        <li>FTA-RMX</li>
+                                        <li>FHY-RTI</li>
+                                        <li>FTA-RMX</li>
+                                        <li>FHY-RTI</li>
+                                        <li>FTA-RMX</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="div-cell">
+                        <div class="form-control">
+                            <input type="text" />
+                        </div>
+                    </div>
+					<div class="div-cell">
+                        <div class="form-control">
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="div-cell">
+                        <input type="checkbox" checked="checked" class="gray">
+                    </div>
+					<div class="div-cell">
+                        <input type="checkbox" checked="checked" class="gray">
+                    </div>
+				</div>
+				<div class="div-row body btns">
+					<a class="btn min-width margin-left"><span class="icon icon-back"></span>Cancel</a>
+                        <a class="btn btn-primary min-width margin-left"><span class="icon icon-save"></span>Save</a>
+				</div>
+                <div class="div-row body">
+					<div class="div-cell">
+						<label class="checkbox-label"><input type="checkbox" checked="checked"></label></div>
+					<div class="div-cell">Aeroflot support unit 48</div>
+					<div class="div-cell">218412</div>
+					<div class="div-cell">Airline opeator 5623</div>
+					<div class="div-cell">4513614</div>
+					<div class="div-cell">
+                        <input type="checkbox" disabled checked="checked" class="gray">
+                    </div>
+					<div class="div-cell">
+                        <input type="checkbox" disabled checked="checked" class="gray">
+                    </div>
+				</div>
+                                <div class="div-row body">
+                    <div class="div-cell">
+                        <label class="checkbox-label"><input type="checkbox" checked="checked"></label></div>
+                    <div class="div-cell">Aeroflot support unit 48</div>
+                    <div class="div-cell">218412</div>
+                    <div class="div-cell">Airline opeator 5623</div>
+                    <div class="div-cell">4513614</div>
+                    <div class="div-cell">
+                        <input type="checkbox" disabled checked="checked" class="gray">
+                    </div>
+                    <div class="div-cell">
+                        <input type="checkbox" disabled checked="checked" class="gray">
+                    </div>
+                </div>
+			</div>
+        </div>
+		-->
+		
+		
+		
+        <div class="wide-table-container watch-list">
+            <table>
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>Carrier <span class="sorting_asc"></span></th>
+                    <th>Aircraft ID</th>
+                    <th>Position</th>
+                    <th>ESN</th>
+                    <th>Start Date</th>
+                    <th>Stop Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><label class="checkbox-label"><input type="checkbox" checked="checked"></label></td>
+                    <td colspan="2">
+                        <div class="form-control valid-error">
+                            <ui-select ng-model="ctrl.country.selected" theme="selectize" style="width: 100%" class="ng-two-col" ng-disabled="ctrl.disabled" title="Choose a country">
+                                <ui-select-match placeholder="Select or search a country in the list..."><div class="item-box"><div class="item">{{$select.selected.name}}</div><div class="item">{{$select.selected.code}}</div></div></ui-select-match>
+                                <ui-select-choices repeat="country in ctrl.countries | filter: $select.search">
+                                    <div class="item" ng-bind-html="country.name | highlight: $select.search"></div>
+                                    <div class="item" ng-bind-html="country.code | highlight: $select.search"></div>
+                                </ui-select-choices>
+                                
+                                <!-- Не знаю как ты его сюда впехнешь! но ты должен!)) -->
+                                
+                            </ui-select>
+							<span class="valid-bubble">Wrong data value</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-control">
+                            <input type="text" />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-control">
+                            <input type="text" />
+                        </div>
+                    </td>
+                    <td><input type="checkbox" checked="checked"></td>
+                    <td><input type="checkbox" checked="checked"></td>
+                </tr>
+                <tr>
+                    <td colspan="7" class="col-buttons">
+                        <a class="btn min-width margin-left"><span class="icon icon-back"></span>Cancel</a>
+                        <a class="btn btn-primary min-width margin-left"><span class="icon icon-save"></span>Save</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="checkbox-label"><input type="checkbox" checked="checked"></label></td>
+                    <td>Aeroflot</td>
+                    <td>FHY-RTY</td>
+                    <td>2</td>
+                    <td>767003</td>
+                    <td><input type="checkbox" class="gray"></td>
+                    <td><input type="checkbox" checked="checked" class="gray"></td>
+                </tr>
+                <tr>
+                    <td><label class="checkbox-label"><input type="checkbox"></label></td>
+                    <td>Aeroflot</td>
+                    <td>FHY-RTY</td>
+                    <td>2</td>
+                    <td>767003</td>
+                    <td><input type="checkbox" class="gray"></td>
+                    <td><input type="checkbox" checked="checked" class="gray"></td>
+                </tr>
+                <tr>
+                    <td><label class="checkbox-label"><input type="checkbox"></label></td>
+                    <td>Aeroflot 2</td>
+                    <td>FHY-RTY</td>
+                    <td>2</td>
+                    <td>767003</td>
+                    <td><input type="checkbox" class="gray"></td>
+                    <td><input type="checkbox" checked="checked" class="gray"></td>
+                </tr>
+                <tr>
+                    <td><label class="checkbox-label"><input type="checkbox" checked="checked"></label></td>
+                    <td>Aeroflot</td>
+                    <td>FHY-RTY</td>
+                    <td>2</td>
+                    <td>767003</td>
+                    <td><input type="checkbox" class="gray"></td>
+                    <td><input type="checkbox" checked="checked" class="gray"></td>
+                </tr>
+                <tr>
+                    <td><label class="checkbox-label"><input type="checkbox"></label></td>
+                    <td>Aeroflot</td>
+                    <td>FHY-RTY</td>
+                    <td>2</td>
+                    <td>767003</td>
+                    <td><input type="checkbox" class="gray"></td>
+                    <td><input type="checkbox" checked="checked" class="gray"></td>
+                </tr>
+                <tr>
+                    <td><label class="checkbox-label"><input type="checkbox"></label></td>
+                    <td>Aeroflot</td>
+                    <td>FHY-RTY</td>
+                    <td>2</td>
+                    <td>767003</td>
+                    <td><input type="checkbox" class="gray"></td>
+                    <td><input type="checkbox" checked="checked" class="gray"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+	
+		
+		
+		
+		
+		
+    </div>
+</div>
+
+<div id="modal-add" style="display:none;">
+    <h2>Modal</h2>
+    <div class="row clearfix margin-bottom">
+        <div class="col w-33">
+            <div class="form-control">
+                <label>Name</label>
+                <select>
+                    <option value="0">Aeroflot</option>
+                    <option value="1">Boeing</option>
+                    <option value="2">Boeing 2</option>
+                </select>
+            </div>
+        </div>
+        <div class="col w-33">
+            <div class="form-control">
+                <label>Name</label>
+                <select>
+                    <option value="0">Aeroflot</option>
+                    <option value="1">Boeing</option>
+                    <option value="2">Boeing 2</option>
+                </select>
+            </div>
+        </div>
+        <div class="col w-33">
+            <div class="form-control">
+                <label>Name</label>
+                <select>
+                    <option value="0">Aeroflot</option>
+                    <option value="1">Boeing</option>
+                    <option value="2">Boeing 2</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row clearfix margin-bottom">
+        <div class="col w-33">
+            <div class="form-control">
+                <label>Name</label>
+                <select>
+                    <option value="0">Aeroflot</option>
+                    <option value="1">Boeing</option>
+                    <option value="2">Boeing 2</option>
+                </select>
+            </div>
+        </div>
+        <div class="col w-67">
+            <div class="form-control">
+                <label>Name</label>
+                <select>
+                    <option value="0">Aeroflot</option>
+                    <option value="1">Boeing</option>
+                    <option value="2">Boeing 2</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    <div class="form-control no-margin">
+        <label>Name</label>
+        
+        <div class="files-upload style clearfix no-margin">
+            <p class="clickable">
+                <a>
+                    <span>Drop file here</span>
+                    or click for explore
+                </a>
+            </p>
+        </div>
+    </div>
+    
+    <div class="text-right buttons">
+        <a class="btn min-width margin-left">Cancel</a>
+        <a class="btn btn-primary min-width margin-left">Ok</a>
+    </div>
+</div>
+
+
+
+<script>
+    $( function() {
+        $('.files-upload').dropzone({
+            url: "/",
+            clickable: '.files-upload, .files-upload .clickable',
+            addRemoveLinks: true,
+            accept: function(file, done) {
+                var thumbnail = $('.files-upload .dz-preview.dz-file-preview .dz-image:last');
+                
+                /** Нус, дерзайте! Как на макете! **/
+                
+                switch (file.type) {
+                  case 'application/pdf':
+                    thumbnail.css('background', 'url(img/pdf.png');
+                    break;
+                  case 'application/vnd.openxmlformats-officedocument.wordprocessingml.document':
+                    thumbnail.css('background', 'url(img/doc.png');
+                    break;
+                }
+            
+                done();
+            }
+            
+        });
+    } );
+</script>
+
+
+</body>
+</html>
