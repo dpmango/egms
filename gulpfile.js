@@ -49,13 +49,13 @@ var processors = [
     colorFunction(),
     svginline(),
     autoprefixer({browsers: ['last 5 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']}),
-    sorting(),
+    // sorting(),
     // mqpacker(),
     pixrem()
 ];
 
 gulp.task('postcss', function() {
-  return gulp.src('./pcss/new.sss')
+  return gulp.src('./pcss/*.sss')
       .pipe( sourcemaps.init() )
       .pipe( postcss(processors, { parser: sugarss }) )
       .pipe( sourcemaps.write('.') )
@@ -74,7 +74,8 @@ gulp.task('uncss', function() {
     .pipe(uncss({
       html: [
         'http://localhost:3000/profile-nav.html',
-        'http://localhost:3000/my-profile.html'
+        'http://localhost:3000/my-profile.html',
+        'http://localhost:3000/login.html'
       ]
     }))
     .pipe(gulp.dest('css-mini/'));

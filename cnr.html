@@ -172,10 +172,82 @@
           <div class="container-2 container-padding-3">
             <div class="box no-margin">
               <div class="row">
-                <div class="files-upload fullwidth">
-                  <form action="/file-upload" class="dropzone" id="cnrDz">
 
-                  </form>
+                <div class="files-upload fullwidth style clearfix no-margin">
+                    <p class="clickable">
+                        <a>
+                            <span>Drop file here</span>
+                            or click for explore
+                        </a>
+                    </p>
+                </div>
+
+                <div class="dz-mini">
+                  <div class="dz-mini-item">
+                    <div class="dz-mini-item-img">
+                      <img src="img/dz-mini-img.png" alt="">
+                    </div>
+                    <div class="dz-mini-item-bottom">
+                      <div class="dz-mini-item-name">
+                        Graph1.png
+                      </div>
+                      <div class="dz-mini-item-remove">
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dz-mini-item">
+                    <div class="dz-mini-item-img">
+                      <img src="img/dz-mini-img.png" alt="">
+                    </div>
+                    <div class="dz-mini-item-bottom">
+                      <div class="dz-mini-item-name">
+                        Graph1.png
+                      </div>
+                      <div class="dz-mini-item-remove">
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dz-mini-item">
+                    <div class="dz-mini-item-img">
+                      <img src="img/dz-mini-img.png" alt="">
+                    </div>
+                    <div class="dz-mini-item-bottom">
+                      <div class="dz-mini-item-name">
+                        Graph1.png
+                      </div>
+                      <div class="dz-mini-item-remove">
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dz-mini-item">
+                    <div class="dz-mini-item-img">
+                      <img src="img/dz-mini-img.png" alt="">
+                    </div>
+                    <div class="dz-mini-item-bottom">
+                      <div class="dz-mini-item-name">
+                        Graph1.png
+                      </div>
+                      <div class="dz-mini-item-remove">
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dz-mini-item">
+                    <div class="dz-mini-item-img">
+                      <img src="img/dz-mini-img.png" alt="">
+                    </div>
+                    <div class="dz-mini-item-bottom">
+                      <div class="dz-mini-item-name">
+                        Graph1.png
+                      </div>
+                      <div class="dz-mini-item-remove">
+
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
               </div>
@@ -193,5 +265,31 @@
       </div>
     </div>
   </div>
+  <script>
+      $( function() {
+          $('.files-upload').dropzone({
+              url: "/",
+              clickable: '.files-upload, .files-upload .clickable',
+              addRemoveLinks: true,
+              accept: function(file, done) {
+                  var thumbnail = $('.files-upload .dz-preview.dz-file-preview .dz-image:last');
+
+                  /** Нус, дерзайте! Как на макете! **/
+
+                  switch (file.type) {
+                    case 'application/pdf':
+                      thumbnail.css('background', 'url(img/pdf.png');
+                      break;
+                    case 'application/vnd.openxmlformats-officedocument.wordprocessingml.document':
+                      thumbnail.css('background', 'url(img/doc.png');
+                      break;
+                  }
+
+                  done();
+              }
+
+          });
+      } );
+  </script>
 </body>
 </html>

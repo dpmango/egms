@@ -74,10 +74,4 @@ $(document).ready(function(){
     }
   });
 
-  if ($('#cnrDz').length) {
-    console.log('dz found');
-    $("div#cnrDz").dropzone({ url: "/file/post" });
-    // not working ???
-  }
-
 });

@@ -1,44 +1,371 @@
-/* GENERIC CLASSES __ RC */
+@font-face {
+  font-family: 'robotobold';
+  src: url('../fonts/roboto-bold-webfont.eot');
+  src: url('../fonts/roboto-bold-webfont.eot?#iefix') format("embedded-opentype"), url('../fonts/roboto-bold-webfont.woff') format("woff"), url('../fonts/roboto-bold-webfont.ttf') format("truetype"), url('../fonts/roboto-bold-webfont.svg#robotobold') format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'robotoregular';
+  src: url('../fonts/roboto-regular-webfont.eot');
+  src: url('../fonts/roboto-regular-webfont.eot?#iefix') format("embedded-opentype"), url('../fonts/roboto-regular-webfont.woff') format("woff"), url('../fonts/roboto-regular-webfont.ttf') format("truetype"), url('../fonts/roboto-regular-webfont.svg#robotoregular') format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'robotomedium';
+  src: url('../fonts/roboto-medium-webfont.eot');
+  src: url('../fonts/roboto-medium-webfont.eot?#iefix') format("embedded-opentype"), url('../fonts/roboto-medium-webfont.woff') format("woff"), url('../fonts/roboto-medium-webfont.ttf') format("truetype"), url('../fonts/roboto-medium-webfont.svg#robotomedium') format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'oswaldregular';
+  src: url('../fonts/oswald-regular-webfont.eot');
+  src: url('../fonts/oswald-regular-webfont.eot?#iefix') format("embedded-opentype"), url('../fonts/oswald-regular-webfont.woff') format("woff"), url('../fonts/oswald-regular-webfont.ttf') format("truetype"), url('../fonts/oswald-regular-webfont.svg#oswaldregular') format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+html, body, div, span, h2, p, a, img, strong, b, i, ul, li, label {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
+/* HTML5 display-role reset for older browsers */
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.row .col {
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+\::-webkit-input-placeholder, ::-moz-placeholder, :-moz-placeholder, :-ms-input-placeholder {
+  color: #d1d1d1;
+}
+
+
+a {
+  font-family: 'robotomedium', Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: #596c99;
+  outline: none;
+}
+
+
+a:hover, a:active {
+  text-decoration: underline;
+  outline: none;
+}
+
+body {
+  font-family: 'robotoregular', Arial, Helvetica, sans-serif;
+  color: #000;
+  font-size: 16px;
+  line-height: 18px;
+  min-width: 1024px;
+  background: #eef0f5;
+  outline: none;
+}
+
+.header {
+  background: #fff;
+  padding: 10px 15px;
+  -webkit-box-shadow: 0 1px 5px #dadce1;
+          box-shadow: 0 1px 5px #dadce1;
+  margin-bottom: 24px;
+}
+
+.header:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.logo {
+  display: block;
+  float: left;
+  height: 36px;
+  background: url(../img/logo.png) 0 0 no-repeat;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.container {
+  padding: 0 20px;
+}
+
+.container-2 {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.container-padding {
+  padding: 10px 0;
+}
+
+h2 {
+  font: 30px/32px 'oswaldregular', Arial, Helvetica, sans-serif;
+  color: #000;
+  margin: 0 0 25px;
+}
+
+.form-control label {
+  display: block;
+  font-size: 12px;
+  line-height: 14px;
+  color: #5f6062;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+\:not(.tags) > input[type="text"] {
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #bec0c4;
+  border-radius: 3px;
+  padding: 0 10px;
+  min-height: 34px;
+  font-family: 'robotoregular', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 32px;
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: middle;
+}
+
+input {}
+
+input[type='email'], input[type='password'] {
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #bec0c4;
+  border-radius: 3px;
+  padding: 0 10px;
+  min-height: 34px;
+  font-family: 'robotoregular', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 32px;
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.form-control.valid-error {
+  position: relative;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 10px 8px;
+  background: #fff;
+  border: 1px solid #596c99;
+  border-radius: 3px;
+  text-align: center;
+  -webkit-box-shadow: 0 2px 3px #dadce1;
+          box-shadow: 0 2px 3px #dadce1;
+  text-decoration: none;
+  font-family: 'robotoregular', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  height: 35px;
+  color: #596c99;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+}
+
+.btn .icon {
+  top: 2px;
+  margin-right: 10px;
+}
+
+.btn.min-width {
+  min-width: 150px;
+}
+
+.btn.margin-left {
+  margin-left: 6px;
+}
+
+.btn.btn-primary {
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6479a5+0,526491+100 */
+  background: #6479a5;
+
+  /* Old browsers */
+
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #6479a5 0%, #526491 100%);
+
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#6479a5), to(#526491));
+  background: linear-gradient(to bottom, #6479a5 0%, #526491 100%);
+
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6479a5', endColorstr='#526491', GradientType=0);
+
+  /* IE6-9 */
+  color: #fff;
+}
+
+.btn:disabled {
+  border-color: #CCC;
+  background: #F5F5F5;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #888;
+  cursor: default;
+}
+
+.btn:hover, .btn:focus {
+  text-decoration: none;
+}
+
+.btn:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.col {
+  float: left;
+  width: 45%;
+  padding-right: 5%;
+}
+
+.row {
+  margin: 0 -10px;
+}
+
+.row .col {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+}
+
+.splitter {
+  background: #e1e3e8;
+  height: 2px;
+  margin-bottom: 18px;
+}
+
+.selected-tabs .tabs-title {
+  display: block;
+  opacity: 0.5;
+  background: #dfe3ec;
+  border-top: 1px solid #eef0f5;
+  border-bottom: 1px solid #eef0f5;
+  -webkit-box-shadow: 0 0 0px 1px #d6d8dc;
+          box-shadow: 0 0 0px 1px #d6d8dc;
+  padding: 2px 0;
+  font-size: 30px;
+}
+
+.selected-tabs .tabs-title .tab-name {
+  display: block;
+  padding: 4px 15px 2px 0;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+  float: left;
+  font: 20px/22px 'oswaldregular', Arial, Helvetica, sans-serif;
+}
+
+.selected-tabs .tabs-title:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.selected-tabs .tabs-content.active .tabs-title {
+  opacity: 1;
+  cursor: pointer;
+  *cursor: hand;
+}
+
+.box {
+  margin-bottom: 20px;
+}
+
+.box:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+.form-control textarea {
+  width: 100%;
+}
+
+
+.form-control textarea.h75 {
+  height: 75px;
+}
+
+
+.form-control.fullwidth {
+  margin-bottom: 10px;
+}
+
+
+.form-control.fullwidth input, .form-control.fullwidth textarea {
+  width: 100%;
+}
+
+
+.form-control.fullwidth textarea {
+  display: inline-block;
+  height: 175px;
+  font-size: 16px;
+  line-height: 1.3em;
+}
+
+.flr {
+  float: right;
+}
 .mt20 {
   margin-top: 20px;
 }
 .mt30 {
   margin-top: 30px;
 }
-
-.flr {
-  float: right;
+.mt40 {
+  margin-top: 40px;
 }
 
-
-/* POSSIBLE CONFLICTS */
-
-b {
-  font-weight: 700;
+.min-width-220 {
+  min-width: 230px;
 }
 
-.form-control.fullwidth {
-  margin-bottom: 10px;
-}
-
-.form-control.fullwidth input {
-  width: 100%;
-}
-
-.row {}
-
-.row::after {
-  display: block;
-  content: ' ';
-  clear: both;
-}
-
-/* NEW STYLES */
-
-/* ICONS CSS ONLY */
-
-/* ICONS */
 
 .icon-edit {
   background-image: url(../img/icon-edit.png);
@@ -47,9 +374,7 @@ b {
   vertical-align: -2px;
 }
 
-/* icon modificators */
-
-/* CNR */
+/*/////// */
 
 
 
@@ -77,6 +402,9 @@ b {
 }
 .login-bg .container-2 {
   margin-top: 20vh;
+}
+.login-bg .footer {
+  position: absolute;
 }
 @media(max-height: 600px) {
   .login-bg {
@@ -324,7 +652,14 @@ b {
           flex: 0 0 50px;
 }
 
+.dashboard-left.collapsed .collapse .ico {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .dashboard-left.collapsed a {
+  max-width: 52px;
   padding-left: 10px;
   background: #525966 url('../img/dash-left-carret-small.svg') no-repeat 95% 95%;
 }
@@ -334,12 +669,12 @@ b {
 }
 
 .dashboard-left-group {
-  padding-top: 10px;
+  margin-top: 10px;
 }
 
 .dashboard-left-group:first-child {
-  padding-top: 5px;
-  padding-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .dashboard-right {
@@ -385,6 +720,11 @@ b {
   background: url('../img/ico-close.png') no-repeat center;
   vertical-align: middle;
   margin-right: 10px;
+}
+
+.dashboard-right .form-control input, .dashboard-right .form-control textarea {
+  height: 34px;
+  padding-left: 15px;
 }
 
 .dashboard-right .form-control img {
@@ -621,6 +961,7 @@ b {
   width: 48px;
   height: 48px;
   border-radius: 50%;
+  overflow: hidden;
 }
 
 .header-user-img img {
@@ -633,10 +974,15 @@ b {
   font-family: 'robotomedium', Arial, Helvetica, sans-serif;
 }
 
+.header-user-fl {
+  text-align: right;
+}
+
 .header-user-name {
   font-size: 20px;
   margin-top: 5px;
   margin-bottom: 5px;
+  text-align: left;
 }
 
 .header-user-link {
