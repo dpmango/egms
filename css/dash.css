@@ -384,7 +384,8 @@ input[type='email'], input[type='password'] {
   background-size: cover;
   min-height: 100%;
   position: relative;
-  min-height: 100vh;
+  min-height: -webkit-calc(100vh - 75px);
+  min-height: calc(100vh - 75px);
   min-width: 1200px;
 }
 .login-bg .header {

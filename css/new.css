@@ -473,50 +473,7 @@ span[class^='icon'].muted {
 }
 
 /* CNR */
-.files-upload .dz-message {
-  text-align: center;
-}
-.files-upload .dropzone .dz-preview {
-  width: 33%;
-  background: white;
-  margin-top: 30px;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 1px 0 #c3c5c9;
-          box-shadow: 0 1px 0 #c3c5c9;
-  padding-bottom: 10px;
-}
-.files-upload .dz-size {
-  display: none;
-}
-.files-upload .dz-details {
-  padding: 10px;
-  font-size: 16px;
-  color: #000;
-}
-.files-upload .dz-progress {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-.files-upload .dz-image {
-  overflow: hidden;
-  height: 145px;
-  max-height: 145px;
-  position: relative;
-}
-.files-upload .dz-image img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 100%;
-}
-.files-upload .dz-error-message {
-  color: tomato;
-  font-size: 12px;
-  padding: 5px 10px;
-}
+.files-upload {}
 .files-upload.fullwidth {
   width: 100%;
 }
