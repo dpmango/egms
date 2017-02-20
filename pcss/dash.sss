@@ -292,12 +292,15 @@ input
 .login-bg
   background: url('../img/loginBG.png') no-repeat center
   background-size: cover
-  min-height: 100%
   position: relative
-  min-height: calc(100vh - 75px)
+  min-height: 100vh
   min-width: 1200px
-  @media(height <= 600px)
-    min-height: 600px
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: column
+  @media(height <= 650px)
+    min-height: 650px
   .header
     background: transparent
     box-shadow: none
@@ -311,8 +314,10 @@ input
   .container-2
     margin-top: 20vh
 
+  .main
+    flex: 1
   .footer
-    position: absolute
+    position: relative
 
 .login
   &-info
