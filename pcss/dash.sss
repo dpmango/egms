@@ -527,8 +527,16 @@ input
     input, textarea
       height: 34px
       padding-left: 15px
+      -webkit-appearance: none
+      box-shadow: none
+      border: 1px solid #d6d8dc
+      border-radius: 4px
     img
       max-width: 100%
+      display: block
+      width: 100%
+      border-radius: 4px
+      overflow: hidden
 
 
 .dashboard-navi
@@ -633,7 +641,12 @@ input
     display: block
     content: ' '
   img
+    display: block
+    border-radius: 4px
+    overflow: hidden
     max-width: 100%
+    max-width: 100px
+    max-height: 100px
     float: left
     margin-right: 13px
   &-name
