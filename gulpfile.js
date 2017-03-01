@@ -68,14 +68,12 @@ gulp.task('postcss', function() {
 
 gulp.task('uncss', function() {
   return gulp.src([
-      'css/styles.css',
-      'css/new.css'
+      'css/3.css'
     ])
     .pipe(uncss({
       html: [
-        'http://localhost:3000/profile-nav.html',
-        'http://localhost:3000/my-profile.html',
-        'http://localhost:3000/login.html'
+        'http://localhost:3004/catalog.html',
+        'http://localhost:3004/files.html'
       ]
     }))
     .pipe(gulp.dest('css-mini/'));

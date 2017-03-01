@@ -1,0 +1,885 @@
+@font-face
+  font-family: 'robotobold'
+  src: url('../fonts/roboto-bold-webfont.eot')
+  src: url('../fonts/roboto-bold-webfont.eot?#iefix') format("embedded-opentype"), url('../fonts/roboto-bold-webfont.woff') format("woff"), url('../fonts/roboto-bold-webfont.ttf') format("truetype"), url('../fonts/roboto-bold-webfont.svg#robotobold') format("svg")
+  font-weight: normal
+  font-style: normal
+@font-face
+  font-family: 'robotoregular'
+  src: url('../fonts/roboto-regular-webfont.eot')
+  src: url('../fonts/roboto-regular-webfont.eot?#iefix') format("embedded-opentype"), url('../fonts/roboto-regular-webfont.woff') format("woff"), url('../fonts/roboto-regular-webfont.ttf') format("truetype"), url('../fonts/roboto-regular-webfont.svg#robotoregular') format("svg")
+  font-weight: normal
+  font-style: normal
+@font-face
+  font-family: 'robotomedium'
+  src: url('../fonts/roboto-medium-webfont.eot')
+  src: url('../fonts/roboto-medium-webfont.eot?#iefix') format("embedded-opentype"), url('../fonts/roboto-medium-webfont.woff') format("woff"), url('../fonts/roboto-medium-webfont.ttf') format("truetype"), url('../fonts/roboto-medium-webfont.svg#robotomedium') format("svg")
+  font-weight: normal
+  font-style: normal
+@font-face
+  font-family: 'oswaldregular'
+  src: url('../fonts/oswald-regular-webfont.eot')
+  src: url('../fonts/oswald-regular-webfont.eot?#iefix') format("embedded-opentype"), url('../fonts/oswald-regular-webfont.woff') format("woff"), url('../fonts/oswald-regular-webfont.ttf') format("truetype"), url('../fonts/oswald-regular-webfont.svg#oswaldregular') format("svg")
+  font-weight: normal
+  font-style: normal
+html, body, div, span, h2, p, a, img, strong, b, i, ul, li, label
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+// HTML5 display-role reset for older browsers
+
+*
+  box-sizing: border-box
+
+.row .col
+  -ms-box-sizing: border-box
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+body
+  line-height: 1
+
+a
+  cursor: pointer
+  
+ul
+  list-style: none
+
+\::-webkit-input-placeholder, ::-moz-placeholder, :-moz-placeholder, :-ms-input-placeholder
+  color: #d1d1d1
+
+
+a
+  font-family: 'robotomedium', Arial, Helvetica, sans-serif
+  text-decoration: none
+  color: #596c99
+  outline: none
+  &:hover, &:active
+    text-decoration: underline
+    outline: none
+
+body
+  font-family: 'robotoregular', Arial, Helvetica, sans-serif
+  color: #000
+  font-size: 16px
+  line-height: 18px
+  min-width: 1024px
+  background: #eef0f5
+  outline: none
+
+.header
+  background: #fff
+  padding: 10px 15px
+  box-shadow: 0 1px 5px #dadce1
+  margin-bottom: 24px
+  &:after
+    content: ''
+    display: block
+    clear: both
+
+.logo
+  display: block
+  float: left
+  height: 36px
+  background: url(../img/logo.png) 0 0 no-repeat
+  font-size: 20px
+  line-height: 36px
+
+.container
+  padding: 0 20px
+
+.container-2
+  max-width: 820px
+  margin: 0 auto
+
+.container-padding
+  padding: 10px 0
+
+h2
+  font: 30px/32px 'oswaldregular', Arial, Helvetica, sans-serif
+  color: #000
+  margin: 0 0 25px
+
+.form-control label
+  display: block
+  font-size: 12px
+  line-height: 14px
+  color: #5f6062
+  text-transform: uppercase
+  letter-spacing: 1px
+  margin-bottom: 5px
+
+\:not(.tags) > input[type="text"]
+  display: inline-block
+  background: #fff
+  border: 1px solid #bec0c4
+  border-radius: 3px
+  padding: 0 10px
+  min-height: 34px
+  font-family: 'robotoregular', Arial, Helvetica, sans-serif
+  font-size: 16px
+  line-height: 32px
+  color: #000
+  box-sizing: border-box
+  vertical-align: middle
+
+input
+  &[type='email'], &[type='password']
+    display: inline-block
+    background: #fff
+    border: 1px solid #bec0c4
+    border-radius: 3px
+    padding: 0 10px
+    min-height: 34px
+    font-family: 'robotoregular', Arial, Helvetica, sans-serif
+    font-size: 16px
+    line-height: 32px
+    color: #000
+    box-sizing: border-box
+    vertical-align: middle
+
+.form-control.valid-error
+  position: relative
+
+.btn
+  display: inline-block
+  padding: 6px 10px 8px
+  background: #fff
+  border: 1px solid #596c99
+  border-radius: 3px
+  text-align: center
+  box-shadow: 0 2px 3px #dadce1
+  text-decoration: none
+  font-family: 'robotoregular', Arial, Helvetica, sans-serif
+  font-size: 16px
+  line-height: 18px
+  height: 35px
+  color: #596c99
+  box-sizing: border-box
+  cursor: pointer
+  &.min-width
+    min-width: 150px
+  &.margin-left
+    margin-left: 6px
+  &.btn-primary
+    // Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6479a5+0,526491+100
+    background: #6479a5
+    // Old browsers
+    background: -moz-linear-gradient(top, #6479a5 0%, #526491 100%)
+    // FF3.6-15
+    background: -webkit-linear-gradient(top, #6479a5 0%, #526491 100%)
+    // Chrome10-25,Safari5.1-6
+    background: linear-gradient(to bottom, #6479a5 0%, #526491 100%)
+    // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6479a5', endColorstr='#526491', GradientType=0)
+    // IE6-9
+    color: #fff
+  &:disabled
+    border-color: #CCC
+    background: #F5F5F5
+    box-shadow: none
+    color: #888
+    cursor: default
+  &:hover, &:focus
+    text-decoration: none
+  &:active
+    box-shadow: none
+  .icon
+    top: 2px
+    margin-right: 10px
+
+.icon
+  display: inline-block
+  width: 16px
+  height: 16px
+  overflow: hidden
+  position: relative
+
+
+.col
+  float: left
+  width: 45%
+  padding-right: 5%
+
+.row
+  margin: 0 -10px
+  .col
+    float: left
+    width: 50%
+    padding: 0 10px
+
+.splitter
+  background: #e1e3e8
+  height: 2px
+  margin-bottom: 18px
+
+.selected-tabs
+  .tabs-title
+    display: block
+    opacity: 0.5
+    background: #dfe3ec
+    border-top: 1px solid #eef0f5
+    border-bottom: 1px solid #eef0f5
+    box-shadow: 0 0 0px 1px #d6d8dc
+    padding: 2px 0
+    font-size: 30px
+    &:after
+      content: ''
+      display: block
+      clear: both
+    .tab-name
+      display: block
+      padding: 4px 15px 2px 0
+      text-transform: uppercase
+      color: #000
+      text-decoration: none
+      float: left
+      font: 20px/22px 'oswaldregular', Arial, Helvetica, sans-serif
+  .tabs-content.active .tabs-title
+    opacity: 1
+    cursor: pointer
+    *cursor: hand
+
+.box
+  margin-bottom: 20px
+  &:after
+    content: ''
+    display: block
+    clear: both
+
+
+.form-control
+  &.fullwidth
+    margin-bottom: 10px
+    input, textarea
+      width: 100%
+    textarea
+      display: inline-block
+      height: 175px
+      font-size: 16px
+      line-height: 1.3em
+  &.w600
+    display: inline-block
+    input
+      width: 600px
+
+  textarea
+    width: 100%
+    &.h75
+      height: 75px
+
+.flr
+  float: right
+.mt20
+  margin-top: 20px
+.mt30
+  margin-top: 30px
+.mt40
+  margin-top: 40px
+
+.min-width-220
+  min-width: 230px
+
+
+.icon-edit
+  background-image: url(../img/icon-edit.png)
+  size: 18px
+  vertical-align: -2px
+
+/////////
+
+
+
+// LOGIN
+.login-bg
+  background: url('../img/loginBG.png') no-repeat center
+  background-size: cover
+  position: relative
+  min-height: 100vh
+  min-width: 1200px
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: column
+  @media(height <= 650px)
+    min-height: 650px
+  .header
+    background: transparent
+    box-shadow: none
+    border: none
+    .logo
+      background: url('../img/logo-dash.png') no-repeat center
+      width: 165px
+      height: 34px
+      background-size: contain
+      margin-top: 8px
+  .container-2
+    margin-top: 20vh
+
+  .main
+    flex: 1
+  .footer
+    position: relative
+
+.login
+  &-info
+    font-size: 16px
+    padding-left: 40px
+    padding-right: 30px
+    line-height: 24px
+    color: color(black a(60%))
+  .fullwidth
+    margin-bottom: 20px
+
+    &.valid-error
+      input
+        border: 2px solid #cc1b30
+    label
+      font-size: 16px
+      font-family: 'robotoregular'
+    label span
+      text-transform: none
+      float: right
+    input
+      font-size: 24px
+      height: 44px
+      line-height: 44px
+  &-cta
+    &-forgot
+      font-size: 16px
+      text-decoration: underline
+      margin-left: 20px
+      font-family: 'robotoregular'
+
+.validation-message
+  background: #cc1b30
+  color: white
+  padding: 9px 10px
+  border-radius: 3px
+  font-size: 16px
+  margin-top: 5px
+  font-family: 'robotoregular'
+  a
+    text-decoration: underline
+    float: right
+    color: white
+    transition: all .3s ease-in-out
+    font-family: 'robotoregular'
+    &:hover
+      opacity: .7
+
+.footer
+  position: relative
+  bottom: 20px
+  width: calc(100% - 50px)
+  left: 0
+  margin-left: 25px
+  margin-right: 25px
+  color: color(black a(60%))
+  box-sizing: border-box
+  max-width: 100%
+  &-copy
+    float: left
+  &-time
+    text-align: right
+    padding-right: 00px
+
+
+// DASHBOARD
+.container-900
+  width: 900px
+  margin-left: auto
+  margin-right: auto
+  padding-left: 30px
+  padding-right: 30px
+.container-960
+  width: 960px
+  margin-left: auto
+  margin-right: auto
+  padding-left: 30px
+  padding-right: 30px
+.row
+  .col-1-3
+    width: 33%
+  .col-2-3
+    width: 66%
+
+.dashboard-bg
+  background: #dadde5
+  &--light
+    background: #eef0f5
+    .dashboard-right
+      padding-left: 1px
+    .footer
+      position: relative
+  .main
+    display: flex
+
+  .header
+    margin-bottom: 0
+    .logo
+      background: url('../img/logo-dash.png') no-repeat center
+      width: 165px
+      height: 34px
+      background-size: contain
+      margin-top: 8px
+  .form-control input
+    background: white
+    &:focus
+      background: white
+
+.dashboard-left
+  background: #666f80
+  float: left
+  min-height: calc(100vh - 72px)
+  width: 300px
+  color: white
+  transition: all .5s ease
+  flex: 0 1 300px
+  position: relative
+  &::after
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 9
+    content: ' '
+    width: 100%
+    height: 100%
+    pointer-events: none
+    display: block
+    box-shadow: inset -30px 0px 30px -30px rgba(0,0,0,0.4)
+  &.collapsed
+    width: 50px
+    flex: 0 0 50px
+    .collapse
+      .ico
+        transform: rotate(180deg)
+    a
+      max-width: 52px
+      padding-left: 10px
+      background: #525966 url('../img/dash-left-carret-small.svg') no-repeat 95% 95%
+      span
+        display: none
+  a
+    color: white
+  ul
+    margin-top: 10px
+    margin-bottom: 50px
+    li
+      display: block
+      max-height: 54px
+      overflow: hidden
+      a
+        padding: 14px 20px 14px 17px
+        background: #525966 url('../img/dash-left-carret.png') no-repeat 95% center
+        border-bottom: 1px solid #7d8493
+        border-top: 1px solid #7d8493
+        margin-top: -1px
+        display: block
+        color: white
+        transition: all .4s ease-in-out
+        font-family: 'oswaldregular'
+        text-transform: uppercase
+        font-size: 16px
+        white-space: nowrap
+        span
+          vertical-align: middle
+        &:hover
+          background-color: #3f454f
+          text-decoration: none
+      &.no-carret
+        a
+          background: #525966
+          &:hover
+            background-color: #3f454f
+      &.collapse
+        a
+          background: #7e899e
+          &:hover
+            background: color(#7e899e a(70%))
+
+  &-group
+    margin-top: 10px
+    &:first-child
+      margin-top: 5px
+      margin-bottom: 10px
+
+.dashboard-right-head
+  font-size: 30px
+  margin-top: 30px
+  font-family: 'oswaldregular'
+  .flr
+    margin-top: -8px
+
+.files
+  .ico-close
+    size: 38px
+    background: url('../img/ico-close.png') no-repeat center
+    vertical-align: middle
+    margin-right: 10px
+  .form-control
+    input, textarea
+      height: 34px
+      padding-left: 15px
+      -webkit-appearance: none
+      box-shadow: none
+      border: 1px solid #d6d8dc
+      border-radius: 4px
+
+
+.icon-logout
+  background: url('../img/ico-logout.png') no-repeat center
+  size: 19px
+  vertical-align: top
+  margin-right: 5px
+  background-size: cover
+
+
+.header
+  &-user
+    float: right
+    &-img
+      display: inline-block
+      margin-right: 10px
+      width: 48px
+      height: 48px
+      border-radius: 50%
+      overflow: hidden
+      img
+        max-width: 100%
+    &-info
+      display: inline-block
+      vertical-align: top
+      font-family: 'robotomedium', Arial, Helvetica, sans-serif
+    &-fl
+      text-align: right
+    &-name
+      font-size: 20px
+      margin-top: 5px
+      margin-bottom: 5px
+      text-align: left
+    &-link
+      font-size: 14px
+      display: inline-block
+      text-decoration: underline
+      color: #000
+      &:hover
+        text-decoration: none
+    &-split
+      background: #cccccc
+      height: 23px
+      width: 1px
+      display: inline-block
+      content: ' '
+      margin-left: 10px
+      margin-right: 10px
+      vertical-align: middle
+
+/// NEW
+.btn.btn-outline
+  background: white
+  color: #596c99
+
+
+.header
+  padding-top: 7px
+  padding-bottom: 0px
+.logo-only
+  display: block
+  float: left
+  height: 40px
+  width: 60px
+  background: url(../img/logo-only.png) 0 0 no-repeat
+  background-size: contain
+  font-size: 20px
+  line-height: 36px
+
+.logo-text
+  display: inline-block
+  font-size: 20px
+  font-family: 'robotomedium', Arial, Helvetica, sans-serif
+  color: #000
+  padding-top: 13px
+  margin-left: -8px
+  &:hover
+    text-decoration: none
+
+.dashboard-right-head
+  padding-top: 0
+  margin-top: 40px
+
+.header-menu
+  display: inline-block
+  float: right
+  margin-right: 0px
+  margin-top: 5px
+  a
+    display: inline-block
+    position: relative
+    color: #000
+    cursor: pointer
+    font-size: 15px
+    padding-bottom: 12px
+    &:first-child:hover
+      text-decoration: none
+
+    &::after
+      display: inline-block
+      content: ' '
+      background: #cccccc
+      width: 2px
+      height: 37px
+      margin-left: 12px
+      margin-right: 10px
+      vertical-align: -12px
+    &:last-child::after
+      opacity: 0
+  &-drop
+    display: none
+    position: absolute
+    top: 49px
+    right: 20px
+    z-index: 9
+    min-width: 220px
+    background: white
+    padding: 15px 0px
+    border-radius: 7px
+    border-top-left-radius: 0px
+    border-top-right-radius: 0px
+
+    border: 2px solid #f8f8f8
+    box-shadow: 0 4px 6px rgba(0,0,0,.3)
+    div
+      display: block
+      padding: 3px 20px
+      transition: all .4s ease
+      cursor: pointer
+      &:hover
+        background: #F2f2f2
+
+
+  .have-drop
+    &::after
+      margin-left: 25px
+    &::before
+      size: 10px 7px
+      display: inline-block
+      position: absolute
+      top: 17px
+      right: 22px
+      content: ' '
+      background: url('../img/DD.png') no-repeat center
+      background-size: cover
+    &:hover
+      .header-menu-drop
+        display: block
+
+.icon-homepage
+  width: 20px
+  height: 20px
+  background: url('../img/ico-home.png')
+  background-size: contain
+  vertical-align: -2px
+
+.icon-plus
+  background-image: svg-load('../img/plus.svg')
+
+.flex-container
+  display: flex
+  flex-direction: column
+  min-height: 90vh
+  .content-pusher
+    box-sizing: border-box
+    flex: 1
+    padding: 0 20px
+    width: 950px
+    margin-left: auto
+    margin-right: auto
+
+.catalog-list
+  margin-top: 30px
+  font-size: 0px
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-start
+  margin-bottom: 100px
+  &-item
+    font-size: 0
+    box-sizing: border-box
+    flex: 0 1 290px
+    display: inline-block
+    background: white
+    margin-right: 20px
+    padding: 0px
+    box-shadow: 0 8px 20px color(#596c99 a(20%))
+    border-radius: 4px
+    margin-bottom: 20px
+    color: #000000
+    transition: box-shadow .5s ease-out
+    cursor: pointer
+    &:nth-child(3)
+      margin-right: 0
+    &:hover
+      box-shadow: none
+    &-img
+      height: 190px
+      position: relative
+      cursor: pointer
+      img
+        display: inline-block
+        max-width: 100%
+    &-desc
+      padding: 20px
+      padding-top: 0
+      padding-bottom: 18px
+    &-name
+      display: block
+      margin-top: 18px
+      color: #000000
+      font: 20px/24px 'oswaldregular'
+      text-transform: uppercase
+    &-metrics
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      justify-content: space-between
+      align-items: center
+    &-date
+      font-size: 16px
+      display: inline-block
+      opacity: .8
+      margin-top: 12px
+      font-family: 'robotoregular'
+      letter-spacing: -.05em
+    &-size
+      font-size: 16px
+      display: inline-block
+      text-align: right
+      opacity: .8
+      margin-top: 12px
+      font-family: 'robotoregular'
+      position: relative
+      padding-right: 30px
+
+.icon-file-download
+  background-image: url('../img/ico-file-download@2x.png')
+  size: 15px 20px
+  background-size: contain
+  position: absolute
+  right: 0
+  top: -5px
+
+.icon-collapse
+  background-image: url('../img/ico-collapse.png')
+  size: 15px 17px
+  background-size: contain
+
+.flex-jcsbp
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: space-between
+  .btn
+    margin-top: 18px
+
+
+.tabs-title
+  display: block
+  opacity: 1
+  background: #dfe3ec
+  border-top: 1px solid #eef0f5
+  border-bottom: 1px solid #eef0f5
+  box-shadow: 0 0 0px 1px #d6d8dc
+  padding: 2px 0
+  font-size: 30px
+  span
+    font-size: 16px
+    opacity: .5
+    display: inline-block
+    position: relative
+    &::before
+      display: inline-block
+      content: ' '
+      background: #cccccc
+      width: 2px
+      height: 25px
+      margin-left: 5px
+      margin-right: 10px
+      vertical-align: -7px
+
+.tab-name
+  padding: 4px 15px 2px 0
+  text-transform: uppercase
+  color: #000
+  text-decoration: none
+  float: left
+  font: 20px/22px 'oswaldregular', Arial, Helvetica, sans-serif
+
+.mt80
+  margin-top: 80px
+
+.mt30
+  margin-top: 30px
+
+
+.table-dash
+  margin-top: 0px
+  margin-bottom: 10px
+  &-name
+    font-size: 16px
+    font-family: 'robotomedium'
+    margin-bottom: 12px
+    margin-top: 18px
+  &-row
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: space-between
+    align-items: baseline
+    position: relative
+    margin-bottom: 10px
+  &-left
+    flex: 0 0 auto
+    margin-right: 10px
+    .icon-file-download
+      position: relative
+      top: 3px
+      right: auto
+      left: 0
+      margin-right: 8px
+    a
+      display: inline-block
+      margin-left: 5px
+      font-family: 'robotomedium'
+      color: #596c99
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+  &-mid
+    flex: 1 1 auto
+    border-bottom: 1px dashed color(black a(20%))
+  &-right
+    text-align: right
+    flex: 0 0 auto
+    margin-left: 10px
+    span
+      display: inline-block
+      margin-left: 10px
+
+
+.mt10
+  margin-top: 30px
+
+
+.icon-file-edit
+  background-image: url('../img/ico-file@2x.png')
+  size: 35px
+  background-size: cover
+  position: absolute
+  top: 2px
+  right: 2px
