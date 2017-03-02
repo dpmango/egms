@@ -46,6 +46,10 @@ body {
   line-height: 1;
 }
 
+a {
+  cursor: pointer;
+}
+
 \::-webkit-input-placeholder, ::-moz-placeholder, :-moz-placeholder, :-ms-input-placeholder {
   color: #d1d1d1;
 }
@@ -224,7 +228,8 @@ input {}
 
 .footer {
   position: relative;
-  bottom: 20px;
+  bottom: 30px;
+  line-height: 1.4em;
   width: -webkit-calc(100% - 50px);
   width: calc(100% - 50px);
   left: 0;
@@ -557,6 +562,7 @@ input {}
           box-shadow: 0 8px 20px rgba(89, 108, 153, 0.2);
   border-radius: 4px;
   margin-bottom: 20px;
+  overflow: hidden;
   color: #000000;
   -webkit-transition: -webkit-box-shadow .5s ease-out;
   transition: -webkit-box-shadow .5s ease-out;
@@ -588,12 +594,12 @@ input {}
 .catalog-list-item-desc {
   padding: 20px;
   padding-top: 0;
-  padding-bottom: 18px;
+  padding-bottom: 17px;
 }
 
 .catalog-list-item-name {
   display: block;
-  margin-top: 18px;
+  margin-top: 16px;
   color: #000000;
   font: 20px/24px 'oswaldregular';
   text-transform: uppercase;
@@ -630,7 +636,7 @@ input {}
   text-align: right;
   opacity: .8;
   margin-top: 12px;
-  font-family: 'robotoregular';
+  font-family: 'robotomedium';
   position: relative;
   padding-right: 30px;
 }
@@ -806,6 +812,7 @@ input {}
 .table-dash-right span {
   display: inline-block;
   margin-left: 10px;
+  min-width: 70px;
 }
 
 
