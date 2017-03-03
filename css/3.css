@@ -506,7 +506,7 @@ input[type='email'], input[type='password'] {
 
 .footer {
   position: relative;
-  bottom: 30px;
+  bottom: 10px;
   line-height: 1.4em;
   width: -webkit-calc(100% - 50px);
   width: calc(100% - 50px);
@@ -981,6 +981,11 @@ input[type='email'], input[type='password'] {
   width: 950px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.flex-container .content-pusher.fullwidth {
+  width: 100%;
+  padding: 0;
 }
 
 .catalog-list {

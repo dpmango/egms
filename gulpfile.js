@@ -72,8 +72,8 @@ gulp.task('uncss', function() {
     ])
     .pipe(uncss({
       html: [
-        'http://localhost:3006/catalog.html',
-        'http://localhost:3006/files.html'
+        'http://localhost:3000/catalog.html',
+        'http://localhost:3000/files.html'
       ]
     }))
     .pipe(gulp.dest('css-mini/'));
