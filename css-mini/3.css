@@ -227,8 +227,8 @@ input {}
 /* LOGIN */
 
 .footer {
-  position: relative;
-  bottom: 10px;
+  position: static;
+  margin-bottom: 30px;
   line-height: 1.4em;
   width: -webkit-calc(100% - 50px);
   width: calc(100% - 50px);
