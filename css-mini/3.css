@@ -44,6 +44,10 @@ html, body, div, span, p, a, img, strong, b, i, label {
 
 body {
   line-height: 1;
+  min-height: 100vh;
+  min-height: 100vh;
+  position: relative;
+  padding: 0 0 100px;
 }
 
 a {
@@ -505,18 +509,18 @@ input {}
 }
 
 .flex-container {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  /*display: -webkit-box;*/
+  /*display: -webkit-flex;*/
+  /*display: -ms-flexbox;*/
+  /*display: flex;*/
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  min-height: -webkit-calc(100vh - 70px);
-  min-height: calc(100vh - 70px);
+  /*min-height: -webkit-calc(100vh - 70px);*/
+  /*min-height: calc(100vh - 70px);*/
 }
 
 .flex-container .content-pusher {
@@ -530,7 +534,7 @@ input {}
   width: 950px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 150px;
+  /*margin-bottom: 100px;*/
 }
 
 .flex-container .content-pusher.fullwidth {
